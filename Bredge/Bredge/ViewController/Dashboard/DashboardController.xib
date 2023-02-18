@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardController" customModule="Bredge" customModuleProvider="target">
+            <connections>
+                <outlet property="floatingMenu" destination="B9d-vU-mp9" id="3KN-8B-UKX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-hP-fPy">
+                    <rect key="frame" x="0.0" y="0.0" width="383" height="285"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="285" id="oA6-cP-sY3"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="LEv-Js-fVo">
+                    <rect key="frame" x="49" y="0.0" width="326" height="667"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="667" id="bPX-Wj-lgd"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Feed" translatesAutoresizingMaskIntoConstraints="NO" id="fom-Ds-qIy">
+                    <rect key="frame" x="0.0" y="0.0" width="216" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-vU-mp9" customClass="FanMenu" customModule="FanMenu">
+                    <rect key="frame" x="215" y="393" width="250" height="250"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="0J2-z3-FAM"/>
+                        <constraint firstAttribute="width" constant="250" id="mck-mG-qg0"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-hp-dfl">
+                    <rect key="frame" x="0.0" y="151" width="216" height="437"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="nextBtnClicked:" destination="-1" eventType="touchUpInside" id="EGn-vO-csg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="1Hr-6K-UjC"/>
+                <constraint firstItem="fom-Ds-qIy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1d9-i4-VQe"/>
+                <constraint firstItem="zQa-hP-fPy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6fh-FN-W5N"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EAK-hp-dfl" secondAttribute="bottom" constant="79" id="7aj-qZ-Dsb"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9TM-g7-wUp"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Am8-rj-HF4"/>
+                <constraint firstItem="fom-Ds-qIy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Cc1-qt-CRp"/>
+                <constraint firstItem="EAK-hp-dfl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="151" id="IUl-xb-ZTi"/>
+                <constraint firstItem="EAK-hp-dfl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JK7-8N-mqc"/>
+                <constraint firstItem="zQa-hP-fPy" firstAttribute="leading" secondItem="EAK-hp-dfl" secondAttribute="leading" id="LLp-Ca-Iis"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="B9d-vU-mp9" secondAttribute="bottom" constant="24" id="MaX-tA-ZJE"/>
+                <constraint firstItem="fom-Ds-qIy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SwW-TJ-rHB"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bqj-SM-blu"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="d6X-5u-TgW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EAK-hp-dfl" secondAttribute="trailing" constant="159" id="ehe-sM-p2F"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="g3j-xQ-X00"/>
+                <constraint firstItem="LEv-Js-fVo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="h79-xE-4Dy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fom-Ds-qIy" secondAttribute="trailing" constant="159" id="nJT-GS-bfW"/>
+                <constraint firstAttribute="trailing" secondItem="zQa-hP-fPy" secondAttribute="trailing" constant="-8" id="na5-N3-WwS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B9d-vU-mp9" secondAttribute="trailing" constant="-90" id="s8U-zg-a4A"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="117.39130434782609"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera" width="341" height="822.5"/>
+        <image name="Feed" width="226.5" height="825"/>
+        <image name="Map" width="397.5" height="440"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+PODS:
+  - FanMenu (0.7.5):
+    - Macaw
+  - FlexColorPicker (1.4.4)
+  - GoogleMaps (7.1.0):
+    - GoogleMaps/Maps (= 7.1.0)
+  - GoogleMaps/Base (7.1.0)
+  - GoogleMaps/Maps (7.1.0):
+    - GoogleMaps/Base
+  - GooglePlaces (7.1.0)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Macaw (0.9.10):
+    - SWXMLHash
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - SWXMLHash (7.0.0)
+
+DEPENDENCIES:
+  - FanMenu
+  - FlexColorPicker
+  - GoogleMaps (= 7.1.0)
+  - GooglePlaces (= 7.1.0)
+  - ImageSlideshow (~> 1.9.0)
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView (~> 4.7.0)
+
+SPEC REPOS:
+  trunk:
+    - FanMenu
+    - FlexColorPicker
+    - GoogleMaps
+    - GooglePlaces
+    - ImageSlideshow
+    - IQKeyboardManagerSwift
+    - Macaw
+    - NVActivityIndicatorView
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  FanMenu: f26be76147954666be0b89ae6ffeb12b72167f2b
+  FlexColorPicker: ce72e0a9e0870815a0beba419ac3e09913401624
+  GoogleMaps: bc56ffb0324e345a2d91bac1a64a920f9c8f1b20
+  GooglePlaces: 187946335ec3dc624de71c0a9ddcc712f19b0ee1
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Macaw: 7af8ea57aa2cab35b4a52a45e6f85eea753ea9ae
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SWXMLHash: cf8682ebf12f124e77554d6a5f9170830626d99e
+
+PODFILE CHECKSUM: 6e106402903266e1f522971985673c6da7ca5176
+
+COCOAPODS: 1.11.2

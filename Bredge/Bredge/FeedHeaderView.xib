@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedHeaderView" customModule="Bredge" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="U4S-GX-QGb" customClass="FeedHeaderView" customModule="Bredge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FM3-h8-mPr">
+                    <rect key="frame" x="16" y="10" width="398" height="145"/>
+                    <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="145" id="YBF-64-Yfu"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JY6-tY-uvA">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zLw-FI-oyQ"/>
+                    </connections>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-I3-7Wx">
+                    <rect key="frame" x="16" y="163" width="382" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="489-fP-ZxR">
+                            <rect key="frame" x="0.0" y="0.0" width="181" height="40"/>
+                            <color key="backgroundColor" name="8925F0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="  Create a post" image="add"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-4G-igz">
+                            <rect key="frame" x="201" y="0.0" width="181" height="40"/>
+                            <color key="backgroundColor" name="8925F0"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="users-alt" title="  Connections">
+                                <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7Mu-Tq-T9h"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="o2P-FN-uKU"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstItem="hMH-I3-7Wx" firstAttribute="leading" secondItem="FM3-h8-mPr" secondAttribute="leading" id="5J6-A4-5Fw"/>
+                <constraint firstAttribute="bottom" secondItem="hMH-I3-7Wx" secondAttribute="bottom" constant="12" id="FF4-PL-PRy"/>
+                <constraint firstItem="FM3-h8-mPr" firstAttribute="top" secondItem="U4S-GX-QGb" secondAttribute="top" constant="10" id="JD0-0E-0HC"/>
+                <constraint firstAttribute="trailing" secondItem="FM3-h8-mPr" secondAttribute="trailing" id="QIT-uZ-EPh"/>
+                <constraint firstItem="hMH-I3-7Wx" firstAttribute="top" secondItem="FM3-h8-mPr" secondAttribute="bottom" constant="8" symbolic="YES" id="kS2-VG-lBj"/>
+                <constraint firstAttribute="trailing" secondItem="hMH-I3-7Wx" secondAttribute="trailing" constant="16" id="q23-Am-MxM"/>
+                <constraint firstItem="FM3-h8-mPr" firstAttribute="leading" secondItem="U4S-GX-QGb" secondAttribute="leading" constant="16" id="u50-vn-WwJ"/>
+            </constraints>
+            <point key="canvasLocation" x="913" y="-434"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add" width="13.5" height="13.5"/>
+        <image name="users-alt" width="18.5" height="18.5"/>
+        <namedColor name="8925F0">
+            <color red="0.53700000047683716" green="0.14499999582767487" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

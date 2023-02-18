@@ -1,0 +1,65 @@
+{
+  "images" : [
+    {
+      "filename" : "Union 28.png",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 19,
+          "left" : 24,
+          "right" : 21,
+          "top" : 17
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 200
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Union 28@2x.png",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 33,
+          "left" : 55,
+          "right" : 36,
+          "top" : 40
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 398
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Union 28@3x.png",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 60,
+          "left" : 92,
+          "right" : 79,
+          "top" : 46
+        },
+        "center" : {
+          "height" : 2,
+          "mode" : "tile",
+          "width" : 563
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

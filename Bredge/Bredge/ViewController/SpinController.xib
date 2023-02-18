@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpinController" customModule="Bredge" customModuleProvider="target">
+            <connections>
+                <outlet property="spinButton" destination="Duq-f7-OMX" id="h32-ks-apc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="xCY-W2-Jv8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPW-gj-1dL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv0-vN-fuJ">
+                            <rect key="frame" x="16" y="5" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="T10-iz-1Hw"/>
+                                <constraint firstAttribute="height" constant="50" id="vdw-QR-NJI"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backWhite"/>
+                            <connections>
+                                <action selector="backbuttonClicked:" destination="-1" eventType="touchUpInside" id="mKs-58-zCw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="1Iz-ug-dgv"/>
+                        <constraint firstItem="pv0-vN-fuJ" firstAttribute="leading" secondItem="UPW-gj-1dL" secondAttribute="leading" constant="16" id="ayb-be-rNJ"/>
+                        <constraint firstItem="pv0-vN-fuJ" firstAttribute="centerY" secondItem="UPW-gj-1dL" secondAttribute="centerY" id="ndI-f9-Br2"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to Do ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hco-yL-mUg">
+                    <rect key="frame" x="52" y="158" width="271" height="42"/>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRz-ij-44v">
+                    <rect key="frame" x="52" y="219" width="271" height="34"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duq-f7-OMX">
+                    <rect key="frame" x="52" y="410" width="271" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="89i-Mx-18R"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Spin"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="leading" secondItem="YRz-ij-44v" secondAttribute="leading" id="D3n-QN-i0z"/>
+                <constraint firstItem="xCY-W2-Jv8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dg9-ZB-2Ps"/>
+                <constraint firstItem="UPW-gj-1dL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LB9-Rb-zx9"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="top" secondItem="UPW-gj-1dL" secondAttribute="bottom" constant="98" id="LEq-s7-Gwd"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="trailing" secondItem="YRz-ij-44v" secondAttribute="trailing" id="Te0-EH-Uwq"/>
+                <constraint firstAttribute="bottom" secondItem="xCY-W2-Jv8" secondAttribute="bottom" id="UB1-xE-Xi3"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="trailing" secondItem="Duq-f7-OMX" secondAttribute="trailing" id="W13-ro-sV0"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="leading" secondItem="Duq-f7-OMX" secondAttribute="leading" id="W7S-QT-1UI"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="52" id="YcF-Xv-zxk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Duq-f7-OMX" secondAttribute="bottom" constant="222" id="d2Z-kl-ShC"/>
+                <constraint firstItem="YRz-ij-44v" firstAttribute="top" secondItem="hco-yL-mUg" secondAttribute="bottom" constant="19" id="dVI-mD-OTn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xCY-W2-Jv8" secondAttribute="trailing" id="geP-05-sLl"/>
+                <constraint firstItem="UPW-gj-1dL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="izZ-Sj-RDQ"/>
+                <constraint firstItem="UPW-gj-1dL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nQ5-8W-E4R"/>
+                <constraint firstItem="xCY-W2-Jv8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="osy-JM-6ni"/>
+                <constraint firstItem="hco-yL-mUg" firstAttribute="centerX" secondItem="UPW-gj-1dL" secondAttribute="centerX" id="qEx-ev-oPc"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="93.103448275862078"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backWhite" width="90" height="90"/>
+        <image name="spinBackGround" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+module Pods_Bredge {
+  umbrella header "Pods-Bredge-umbrella.h"
+
+  export *
+  module * { export * }
+}

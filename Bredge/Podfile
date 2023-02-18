@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Bredge' do
+ 
+pod 'FanMenu'
+pod 'GoogleMaps', '7.1.0'
+pod 'GooglePlaces', '7.1.0'
+pod 'IQKeyboardManagerSwift'
+pod 'ImageSlideshow', '~> 1.9.0'
+pod 'FlexColorPicker'
+#pod 'Alamofire' '~> 4.8.2'
+pod 'NVActivityIndicatorView', '~> 4.7.0'
+
+
+#pod "RKMultiUnitRuler"
+end
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
+end
