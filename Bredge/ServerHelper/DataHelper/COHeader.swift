@@ -6,6 +6,7 @@
 //
 import UIKit
 
+//
 class COHeader: NSObject {
     
     static let shar = COHeader()
