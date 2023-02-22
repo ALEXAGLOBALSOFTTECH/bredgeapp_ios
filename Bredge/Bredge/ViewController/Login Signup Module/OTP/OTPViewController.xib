@@ -75,13 +75,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Lorem Ipsum is simply dummy text of the printing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw7-8Z-flT">
-                    <rect key="frame" x="24" y="190" width="327" height="17"/>
+                    <rect key="frame" x="24" y="220" width="327" height="17"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.11764705882352941" green="0.047058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTN-wc-dly" userLabel="View1">
-                    <rect key="frame" x="24" y="241" width="67" height="67"/>
+                    <rect key="frame" x="24" y="271" width="67" height="67"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUM-9L-8NR">
                             <rect key="frame" x="8" y="8" width="51" height="51"/>
@@ -121,7 +121,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUG-y7-pVH" userLabel="View2">
-                    <rect key="frame" x="111" y="241" width="66.5" height="67"/>
+                    <rect key="frame" x="111" y="271" width="66.5" height="67"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-IC-Zxb">
                             <rect key="frame" x="8" y="8" width="50.5" height="51"/>
@@ -154,7 +154,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttf-nA-XWu" userLabel="View3">
-                    <rect key="frame" x="197.5" y="241" width="67" height="67"/>
+                    <rect key="frame" x="197.5" y="271" width="67" height="67"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lf6-Gg-8LE">
                             <rect key="frame" x="8" y="8" width="51" height="51"/>
@@ -187,7 +187,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHq-h7-a4V" userLabel="View4">
-                    <rect key="frame" x="284.5" y="241" width="66.5" height="67"/>
+                    <rect key="frame" x="284.5" y="271" width="66.5" height="67"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-b5-U5I">
                             <rect key="frame" x="8" y="8" width="50.5" height="51"/>
@@ -220,7 +220,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-em-2dB">
-                    <rect key="frame" x="216" y="333" width="43" height="26.5"/>
+                    <rect key="frame" x="216" y="398" width="43" height="26.5"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal">
                         <attributedString key="attributedTitle">
@@ -238,7 +238,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Didn't receive code? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzB-np-BzJ">
-                    <rect key="frame" x="92" y="338" width="124" height="17"/>
+                    <rect key="frame" x="92" y="403" width="124" height="17"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                     <color key="textColor" red="0.1176470588" green="0.047058823530000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -250,7 +250,9 @@
                         <constraint firstAttribute="width" constant="50" id="tfa-K6-Yu3"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="" backgroundImage="signUpButton"/>
+                    <state key="normal" title="" backgroundImage="signUpButton">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="nextBtnClicked:" destination="-1" eventType="touchUpInside" id="wsq-VE-7IO"/>
                     </connections>
@@ -293,7 +295,7 @@
                 <constraint firstItem="iiV-em-2dB" firstAttribute="centerY" secondItem="fzB-np-BzJ" secondAttribute="centerY" id="XQL-Zq-5CV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tlf-6h-d9F" secondAttribute="trailing" constant="28" id="cTf-1P-T2u"/>
                 <constraint firstItem="tlf-6h-d9F" firstAttribute="top" secondItem="BSc-01-V78" secondAttribute="bottom" constant="10" id="ePd-Jf-yfm"/>
-                <constraint firstItem="iiV-em-2dB" firstAttribute="top" secondItem="Ttf-nA-XWu" secondAttribute="bottom" constant="25" id="ega-ql-BMs"/>
+                <constraint firstItem="iiV-em-2dB" firstAttribute="top" secondItem="Ttf-nA-XWu" secondAttribute="bottom" constant="60" id="ega-ql-BMs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PHq-h7-a4V" secondAttribute="trailing" constant="24" id="hAl-pW-7ni"/>
                 <constraint firstItem="EUG-y7-pVH" firstAttribute="height" secondItem="jTN-wc-dly" secondAttribute="height" id="hne-6P-JtB"/>
                 <constraint firstItem="GhE-60-Bns" firstAttribute="centerY" secondItem="Qal-K7-EIl" secondAttribute="centerY" id="kh9-Zt-UnT"/>
@@ -305,7 +307,7 @@
                 <constraint firstItem="EUG-y7-pVH" firstAttribute="top" secondItem="jTN-wc-dly" secondAttribute="top" id="szg-bt-zcj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="psC-zB-1Gq" secondAttribute="trailing" constant="20" id="uN3-dE-6Om"/>
                 <constraint firstItem="EUG-y7-pVH" firstAttribute="width" secondItem="jTN-wc-dly" secondAttribute="width" id="vw7-K5-ssk"/>
-                <constraint firstItem="iw7-8Z-flT" firstAttribute="top" secondItem="Qal-K7-EIl" secondAttribute="bottom" constant="30" id="yDP-U1-NLr"/>
+                <constraint firstItem="iw7-8Z-flT" firstAttribute="top" secondItem="Qal-K7-EIl" secondAttribute="bottom" constant="60" id="yDP-U1-NLr"/>
                 <constraint firstItem="PHq-h7-a4V" firstAttribute="leading" secondItem="Ttf-nA-XWu" secondAttribute="trailing" constant="20" id="yjB-DS-zuH"/>
             </constraints>
             <point key="canvasLocation" x="138.40000000000001" y="103.89805097451276"/>

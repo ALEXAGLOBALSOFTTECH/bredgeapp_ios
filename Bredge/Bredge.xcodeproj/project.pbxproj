@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047CEECA29A3744C00404BFA /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CEEC829A3744C00404BFA /* LogInController.swift */; };
+		047CEECB29A3744C00404BFA /* LogInController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047CEEC929A3744C00404BFA /* LogInController.xib */; };
+		04ACAE4A29A4CA9900C64A53 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACAE4829A4CA9900C64A53 /* SignUpController.swift */; };
+		04ACAE4B29A4CA9900C64A53 /* SignUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACAE4929A4CA9900C64A53 /* SignUpController.xib */; };
 		4A4370A829434AC400E0EAB3 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4370A729434AC400E0EAB3 /* UserDefault.swift */; };
 		4A4370AA29434B8900E0EAB3 /* AnyCodableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4370A929434B8800E0EAB3 /* AnyCodableValue.swift */; };
 		4ADE5AC0293E1F7800004332 /* AboutModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE5AA3293E1F7800004332 /* AboutModal.swift */; };
@@ -183,6 +187,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047CEEC829A3744C00404BFA /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		047CEEC929A3744C00404BFA /* LogInController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInController.xib; sourceTree = "<group>"; };
+		04ACAE4829A4CA9900C64A53 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		04ACAE4929A4CA9900C64A53 /* SignUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpController.xib; sourceTree = "<group>"; };
 		4A4370A729434AC400E0EAB3 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		4A4370A929434B8800E0EAB3 /* AnyCodableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCodableValue.swift; sourceTree = "<group>"; };
 		4ADE5AA3293E1F7800004332 /* AboutModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutModal.swift; sourceTree = "<group>"; };
@@ -457,7 +465,9 @@
 			isa = PBXGroup;
 			children = (
 				D8438DF728C7A1F900EBA342 /* Main.storyboard */,
+				047CEEC929A3744C00404BFA /* LogInController.xib */,
 				D8438DF528C7A1F900EBA342 /* ViewController.swift */,
+				047CEEC829A3744C00404BFA /* LogInController.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -484,6 +494,8 @@
 			children = (
 				D6720E13297579F80045D9B6 /* SignupViewController.xib */,
 				D6720E11297579C10045D9B6 /* SignupViewController.swift */,
+				04ACAE4829A4CA9900C64A53 /* SignUpController.swift */,
+				04ACAE4929A4CA9900C64A53 /* SignUpController.xib */,
 			);
 			path = SignUpWithB;
 			sourceTree = "<group>";
@@ -1074,6 +1086,7 @@
 				E031707B29045C4C00EAB0DA /* NotificationCell.xib in Resources */,
 				D8438DFE28C7A1FC00EBA342 /* LaunchScreen.storyboard in Resources */,
 				D852469628D71ED1006CE251 /* FilterCell.xib in Resources */,
+				04ACAE4B29A4CA9900C64A53 /* SignUpController.xib in Resources */,
 				D8438E1F28C7AAC700EBA342 /* Poppins-SemiBoldItalic.otf in Resources */,
 				D8438E1A28C7AAC700EBA342 /* Poppins-Thin.otf in Resources */,
 				E05402DC28CBB69F0017B449 /* SelectInterestCell.xib in Resources */,
@@ -1103,6 +1116,7 @@
 				D8438E2128C7AAC700EBA342 /* Poppins-ThinItalic.otf in Resources */,
 				D8438E2728C7AAC700EBA342 /* Poppins-ExtraBold.otf in Resources */,
 				E00C208228CF8EDE00D1DDF8 /* FeedVC.xib in Resources */,
+				047CEECB29A3744C00404BFA /* LogInController.xib in Resources */,
 				E022283428D8D26C00A6D38A /* CommentsVC.xib in Resources */,
 				D8438E1D28C7AAC700EBA342 /* Poppins-Light.otf in Resources */,
 				D852468328D5E52F006CE251 /* EventListingCell.xib in Resources */,
@@ -1186,6 +1200,7 @@
 				E0DABCC128DA398800E258DE /* CreatePostVC.swift in Sources */,
 				E067802C28D7196F00E7FE27 /* ConnectionListCell.swift in Sources */,
 				E05402D628CBAFDE0017B449 /* SelectInterestsVC.swift in Sources */,
+				047CEECA29A3744C00404BFA /* LogInController.swift in Sources */,
 				E0304E4828CCAC6C00E6EF17 /* FollowPeopleListCell.swift in Sources */,
 				D852469528D71ED1006CE251 /* FilterCell.swift in Sources */,
 				D8FA31F32901461C0060915E /* StoryCollectionViewCell.swift in Sources */,
@@ -1226,6 +1241,7 @@
 				E068E7AD28F87D5F00D5ED22 /* WallpaperCell.swift in Sources */,
 				D852469D28D73439006CE251 /* TapticEngine.swift in Sources */,
 				E0304E5028CCAE2F00E6EF17 /* Validators.swift in Sources */,
+				04ACAE4A29A4CA9900C64A53 /* SignUpController.swift in Sources */,
 				E04B7A11292E38C100C7BE5D /* RKRangeScrollView.swift in Sources */,
 				E00C208328CF8EDE00D1DDF8 /* FeedVC.swift in Sources */,
 				E0304E3F28CCAB7800E6EF17 /* Successful_InviteVC.swift in Sources */,

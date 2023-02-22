@@ -8,9 +8,9 @@
 import UIKit
 
 class BRSplashVC: UIViewController {
-    static let nibName = "BRSplashVC"
+//    static let nibName = "BRSplashVC"
     @IBOutlet weak var splashImageView:UIImageView!
-    
+    static let nibName = "BRSplashVC"
      let img1 = UIImage.init(named: "1")
      let img2 = UIImage.init(named: "2")
      let img3 = UIImage.init(named: "3")
@@ -24,9 +24,9 @@ class BRSplashVC: UIViewController {
     var timerTest : Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let array = [img1,img2,img3,img4,img5,img6,img7,img8]
-        self.startTimer()
-        self.repeatAnimateImagesChanges(images: array as NSArray, imageView: splashImageView)
+//        let array = [img1,img2,img3,img4,img5,img6,img7,img8]
+//        self.startTimer()
+//        self.repeatAnimateImagesChanges(images: array as NSArray, imageView: splashImageView)
     }
 
     func startTimer () {
