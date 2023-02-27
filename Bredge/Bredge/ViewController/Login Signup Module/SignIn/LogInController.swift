@@ -12,10 +12,11 @@ class LogInController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    @IBAction func SignUpBtnClicked(_ sender: Any) {
         
+        self.pushToNextController(controllerName: SignUpController.loadController())
         
     }
-    
-  
     
 }

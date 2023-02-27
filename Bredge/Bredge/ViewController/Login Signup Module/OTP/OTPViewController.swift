@@ -9,8 +9,6 @@ import UIKit
 import IQKeyboardManagerSwift
 
 class OTPViewController: UIViewController,UITextFieldDelegate {
-  
-    
     static let nibName = "OTPViewController"
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var lblTitle: UILabel!
@@ -43,18 +41,11 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         secondTextField.delegate = self
         thirdTextField.delegate = self
         fourthTextField.delegate = self
-       
         print("::=====OTP =:", tokenData)
-
-        
     }
     @IBAction func BackBtnClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-      
     }
-    
-    
-
     @IBAction func resendOtpButtonClick(_ sender: Any) {
         self.viewModel.execute(with: .ResendOTP(parameter: ["email": self.user_email,"token": self.tokenData]))
         self.firstTextField.text = ""

@@ -27,8 +27,6 @@ class SelectInterestsVC: UIViewController {
         self.getUserIntrest()
         // Do any additional setup after loading the view.
     }
-
-
     @IBAction func BackBtnClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
