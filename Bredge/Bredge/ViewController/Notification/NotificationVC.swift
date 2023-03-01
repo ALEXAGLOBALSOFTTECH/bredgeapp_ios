@@ -50,8 +50,6 @@ class NotificationVC: UIViewController {
         searchView.addSubview(backView2)
         searchView.sendSubviewToBack(backView2)
         
-        
-    
     }
     @IBAction func btnBack(_ sender:UIButton) {
        self.goToPreviousController()
@@ -62,7 +60,6 @@ class NotificationVC: UIViewController {
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated:false, completion: nil)
     }
-
 }
 
 extension NotificationVC:UITableViewDelegate,UITableViewDataSource {

@@ -72,8 +72,10 @@ extension SceneDelegate {
 //        let viewController = SetNewPasswordVC()
 //        let viewController = SignUpVC()
 //        let viewController = SelectInterestsVC()
-            let viewController = ConnectSocialVC()
+//            let viewController = ConnectSocialVC()
 //        let viewController: OTPViewController = OTPViewController(nibName:OTPViewController.nibName, bundle: nil)
+//        let viewController = CameraController()
+        let viewController = DashboardController.loadController()
 
         let navigation = UINavigationController(rootViewController: viewController)
         self.window?.rootViewController = navigation // Your initial view controller.

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -144,16 +144,16 @@
                                             <rect key="frame" x="0.0" y="406" width="414" height="194"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hagit Lonnie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-z7-Pg9">
-                                                    <rect key="frame" x="126" y="5" width="162" height="40.5"/>
+                                                    <rect key="frame" x="131" y="5" width="162" height="40.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="26"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g_tick" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-sj-cOe">
-                                                    <rect key="frame" x="298" y="13" width="25" height="25"/>
+                                                    <rect key="frame" x="303" y="15.5" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="JDG-FK-zLq"/>
-                                                        <constraint firstAttribute="width" constant="25" id="bbN-81-M54"/>
+                                                        <constraint firstAttribute="height" constant="20" id="JDG-FK-zLq"/>
+                                                        <constraint firstAttribute="width" constant="20" id="bbN-81-M54"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5U-Ho-W2y">
@@ -274,7 +274,7 @@
                                                                         <constraint firstAttribute="height" constant="35" id="OMb-4f-9qD"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="55" maxY="0.0"/>
                                                                     <state key="normal" title="Follow" image="Group 10781"/>
                                                                     <connections>
                                                                         <action selector="btnFollow:" destination="-1" eventType="touchUpInside" id="6aT-Ni-6M5"/>
@@ -569,7 +569,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Group 10781" width="29" height="29.5"/>
+        <image name="Group 10781" width="57" height="59"/>
         <image name="back" width="24" height="24"/>
         <image name="chat" width="20.5" height="17.5"/>
         <image name="fb2" width="24" height="24"/>
