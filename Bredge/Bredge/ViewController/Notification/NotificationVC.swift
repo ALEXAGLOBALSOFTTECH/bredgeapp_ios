@@ -31,7 +31,7 @@ class NotificationVC: UIViewController {
         self.mainView.applyGradientColors(colors: [ ColorConstants.ApplicationGradientColor.firstGradient.cgColor,ColorConstants.CreatePostGradientColor.secondGradient.cgColor], isFromTopToBottom: true, frameWidth: mainView.bounds)
     /// blur effect 
         let backView = UIView(frame: firstView.bounds)
-        backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         firstView.addSubview(backView)
         firstView.sendSubviewToBack(backView)
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)

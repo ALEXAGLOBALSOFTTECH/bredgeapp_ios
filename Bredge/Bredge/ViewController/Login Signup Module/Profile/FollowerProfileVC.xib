@@ -569,7 +569,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Group 10781" width="57" height="59"/>
+        <image name="Group 10781" width="29" height="29.5"/>
         <image name="back" width="24" height="24"/>
         <image name="chat" width="20.5" height="17.5"/>
         <image name="fb2" width="24" height="24"/>

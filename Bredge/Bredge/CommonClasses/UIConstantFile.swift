@@ -32,7 +32,7 @@ struct ColorConstants {
     
     struct CreatePostGradientColor {
     static let firstGradient = UIColor(hexString: "#F6E8FF")
-    static let secondGradient = UIColor(hexString: "#DEA5FF")
+    static let secondGradient = UIColor(hexString: "#F98AC7")
     }
     
     struct NotificationCardGradientColor {
@@ -40,3 +40,4 @@ struct ColorConstants {
     static let secondGradient = UIColor(hexString: "##D797FC")
     }
 }
+
