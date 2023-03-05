@@ -24,6 +24,7 @@
 		D6720E12297579C10045D9B6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6720E11297579C10045D9B6 /* SignupViewController.swift */; };
 		D67568BB2976A52C0081C0E3 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67568BA2976A52C0081C0E3 /* ErrorModel.swift */; };
 		D678B4BC2976C04B00244769 /* InterestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678B4BB2976C04A00244769 /* InterestList.swift */; };
+		D699C44129AF549D00CE3748 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699C44029AF549D00CE3748 /* RulerView.swift */; };
 		D8438DF428C7A1F900EBA342 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8438DF328C7A1F900EBA342 /* SceneDelegate.swift */; };
 		D8438DF628C7A1F900EBA342 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8438DF528C7A1F900EBA342 /* ViewController.swift */; };
 		D8438DF928C7A1F900EBA342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8438DF728C7A1F900EBA342 /* Main.storyboard */; };
@@ -201,6 +202,7 @@
 		D6720E13297579F80045D9B6 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		D67568BA2976A52C0081C0E3 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		D678B4BB2976C04A00244769 /* InterestList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestList.swift; sourceTree = "<group>"; };
+		D699C44029AF549D00CE3748 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
 		D8438DEE28C7A1F900EBA342 /* Bredge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bredge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8438DF128C7A1F900EBA342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8438DF328C7A1F900EBA342 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -841,6 +843,7 @@
 			children = (
 				E05402CF28CBA1D20017B449 /* SignUpVC.swift */,
 				E05402D028CBA1D20017B449 /* SignUpVC.xib */,
+				D699C44029AF549D00CE3748 /* RulerView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1180,6 +1183,7 @@
 				D8EF3E812918251F00914A5F /* FeedHeaderView.swift in Sources */,
 				D8C765B728CA5BFC0057F99D /* OnBoardController.swift in Sources */,
 				E067803128D7321100E7FE27 /* EventDetailsVC.swift in Sources */,
+				D699C44129AF549D00CE3748 /* RulerView.swift in Sources */,
 				D852467A28D5C0E0006CE251 /* EventListViewController.swift in Sources */,
 				D8C765B428CA4C6F0057F99D /* UIView+Common.swift in Sources */,
 				E0B73A9428CFAF360026592D /* FeedTableViewCell.swift in Sources */,

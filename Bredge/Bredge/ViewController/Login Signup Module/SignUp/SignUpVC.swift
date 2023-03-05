@@ -9,6 +9,13 @@ import UIKit
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
     static let nibName = "SignUpVC"
+    var rangeStart = Measurement(value: 3.0, unit: UnitLength.feet)
+    var rangeLength = Measurement(value: Double(100), unit: UnitLength.feet)
+    var segments = Array<RKSegmentUnit>()
+    var moreMarkers = false
+    var colorOverridesEnabled = false
+    @IBOutlet weak var rulerView: RKMultiUnitRuler!
+    
     @IBOutlet weak var view1,view2,view3,view4:UIView!
     @IBOutlet weak var textFieldDate     :UITextField!
     @IBOutlet weak var textFieldGender   :UITextField!
@@ -51,6 +58,20 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         AppUtility.addButtonForUIPicker(textField: self.textFieldMarital, viewController: self, picker: self.MaritalPicker)
         AppUtility.addButtonForUIDatePicker(textField: self.textFieldDate, viewController: self, picker: self.datePickerValue)
         // Do any additional setup after loading the view.
+        self.rulerView.direction = .horizontal
+        
+        segments = self.createSegments()
+        rulerView?.tintColor = UIColor(red: 0.15, green: 0.18, blue: 0.48, alpha: 1.0)
+         rulerView?.delegate = self
+        rulerView?.dataSource = self
+        
+        let initialValue = (self.rangeForUnit(UnitLength.feet).location + self.rangeForUnit(UnitLength.feet).length) / 2
+        rulerView?.measurement = NSMeasurement(
+                   doubleValue: Double(initialValue),
+                   unit: UnitLength.centimeters)
+    
+              
+        
     }
 
     @IBAction func BackBtnClicked(_ sender: Any) {
@@ -204,4 +225,82 @@ extension SignUpVC : LoginSignupViewModelProtocol {
         }
     }
     
+}
+
+extension SignUpVC : RKMultiUnitRulerDataSource, RKMultiUnitRulerDelegate{
+    
+    func createSegments() -> Array<RKSegmentUnit> {
+        let formatter = MeasurementFormatter()
+        formatter.unitStyle = .long
+        formatter.unitOptions = .providedUnit
+        let ftSegment = RKSegmentUnit(name: "Ft.", unit: UnitLength.feet, formatter: formatter)
+        
+        ftSegment.name = "Ft."
+        ftSegment.unit = UnitLength.feet
+       
+        let ftMarkerTypeMax = RKRangeMarkerType(color: UIColor.blue, size: CGSize(width: 1.0, height: 50.0), scale: 20.0)
+        ftMarkerTypeMax.labelVisible = true
+        
+       
+        ftSegment.markerTypes = [
+            RKRangeMarkerType(color: UIColor.purple, size: CGSize(width: 1.0, height: 20.0), scale: 5),
+            RKRangeMarkerType(color: UIColor.lightGray, size: CGSize(width: 2.0, height: 50.0), scale: 10.0)]
+        
+        let cmsSegment = RKSegmentUnit(name: "cm", unit: UnitLength.centimeters, formatter: formatter)
+        let cmsMarkerTypeMax = RKRangeMarkerType(color: UIColor.brown, size: CGSize(width: 1.0, height: 50.0), scale: 25.0)
+        
+        cmsSegment.markerTypes = [
+            RKRangeMarkerType(color: UIColor.purple, size: CGSize(width: 1.0, height: 25.0), scale: 5.0)]
+        
+        
+            ftSegment.markerTypes.append(ftMarkerTypeMax)
+            cmsSegment.markerTypes.append(cmsMarkerTypeMax)
+        
+        ftSegment.markerTypes.last?.labelVisible = true
+        cmsSegment.markerTypes.last?.labelVisible = true
+        return [ftSegment, cmsSegment]
+    }
+    
+    func unitForSegmentAtIndex(index: Int) -> RKSegmentUnit {
+        return segments[index]
+    }
+    var numberOfSegments: Int {
+        get {
+            return segments.count
+        }
+        set {
+        }
+    }
+    func rangeForUnit(_ unit: Dimension) -> RKRange<Float> {
+        let locationConverted = rangeStart.converted(to: unit as! UnitLength)
+        let lengthConverted = rangeLength.converted(to: unit as! UnitLength)
+        return RKRange<Float>(location: ceilf(Float(locationConverted.value)),
+                              length: ceilf(Float(lengthConverted.value)))
+    }
+    
+    
+    func styleForUnit(_ unit: Dimension) -> RKSegmentUnitControlStyle {
+        let style: RKSegmentUnitControlStyle = RKSegmentUnitControlStyle()
+        style.scrollViewBackgroundColor = UIColor.white // UIColor(red: 0.22, green: 0.74, blue: 0.86, alpha: 1.0)
+        let range = self.rangeForUnit(unit)
+        if unit == UnitLength.centimeters {
+            
+            style.textFieldBackgroundColor = UIColor.clear
+            // color override location:location+40% red , location+60%:location.100% green
+        } else {
+            style.textFieldBackgroundColor = UIColor.red
+        }
+        if (colorOverridesEnabled) {
+            style.colorOverrides = [
+                RKRange<Float>(location: range.location, length: 0.1 * (range.length)): UIColor.red,
+                RKRange<Float>(location: range.location + 0.4 * (range.length), length: 0.2 * (range.length)): UIColor.green]
+        }
+        style.textFieldBackgroundColor = UIColor.clear
+        style.textFieldTextColor = UIColor.black
+        return style
+    }
+    
+    func valueChanged(measurement: NSMeasurement) {
+        print("value changed to \(measurement.doubleValue)")
+    }
 }
