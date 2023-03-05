@@ -226,38 +226,6 @@
             endingLineNumber = "235"
             landmarkName = "updateLoginResult(with:success:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2D077E5A-4921-418E-966E-C28328B4D7A0 - 4823ca9451e98b51"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bredge.ViewController.updateLoginResult(with: Swift.Optional&lt;Swift.String&gt;, success: Swift.Bool) -&gt; ()"
-                  moduleName = "Bredge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajeevarkvanshi/bredgeapp_ios/Bredge/Bredge/ViewController/Login%20Signup%20Module/SignIn/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "235"
-                  endingLineNumber = "235"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  uuid = "2D077E5A-4921-418E-966E-C28328B4D7A0 - 7935a8e064eaaf4c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Bredge.ViewController.updateLoginResult(with: Swift.Optional&lt;Swift.String&gt;, success: Swift.Bool) -&gt; ()"
-                  moduleName = "Bredge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajeevarkvanshi/bredgeapp_ios/Bredge/Bredge/ViewController/Login%20Signup%20Module/SignIn/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "236"
-                  endingLineNumber = "236"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -274,38 +242,6 @@
             endingLineNumber = "218"
             landmarkName = "showHome()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E085F14-B43A-4B71-BA18-86D0085B08AE - e9c60c8aa1041f7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bredge.ViewController.showHome() -&gt; ()"
-                  moduleName = "Bredge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajeevarkvanshi/bredgeapp_ios/Bredge/Bredge/ViewController/Login%20Signup%20Module/SignIn/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "218"
-                  endingLineNumber = "218"
-                  offsetFromSymbolStart = "57">
-               </Location>
-               <Location
-                  uuid = "6E085F14-B43A-4B71-BA18-86D0085B08AE - e9c60c8aa1041f7c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bredge.ViewController.showHome() -&gt; ()"
-                  moduleName = "Bredge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rajeevarkvanshi/bredgeapp_ios/Bredge/Bredge/ViewController/Login%20Signup%20Module/SignIn/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "218"
-                  endingLineNumber = "218"
-                  offsetFromSymbolStart = "505">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
