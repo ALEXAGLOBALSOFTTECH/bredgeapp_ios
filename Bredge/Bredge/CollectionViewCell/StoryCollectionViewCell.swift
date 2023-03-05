@@ -8,7 +8,7 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
-static let cell = "StoryCollectionViewCell"
+    static let cell = "StoryCollectionViewCell"
     @IBOutlet weak var imgStory:UIImageView!
     @IBOutlet weak var view1:UIView!
     @IBOutlet weak var lblCreate:UILabel!
@@ -16,6 +16,7 @@ static let cell = "StoryCollectionViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
-
 }
+

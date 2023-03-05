@@ -71,7 +71,6 @@ class ViewController: UIViewController,UITextFieldDelegate,RKMultiUnitRulerDataS
         UINavigationBar.appearance().isHidden = true
         
     }
-    
     @IBAction func loginButtonClicked(_ sender: Any) {
         
         if (self.emailTextField.text?.count ?? 0) == 0 {
@@ -84,8 +83,6 @@ class ViewController: UIViewController,UITextFieldDelegate,RKMultiUnitRulerDataS
             
             self.loginUser()
         }
-        
-        
     }
     @IBAction func forgotBtnClicked(_ sender: Any) {
         //        self.pushToNextController(controllerName: WallpaperVC.loadController())
