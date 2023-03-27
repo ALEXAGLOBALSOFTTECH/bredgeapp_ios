@@ -17,6 +17,8 @@ protocol LoginSignupViewModelProtocol: AnyObject {
     func updateForgetPasswordResult(with message:String?, success:Bool, token:String?)
     func updateResendOtpResult(with message:String?, success:Bool, token:String)
     func updateSetNewpasswordResult(with message:String?, success:Bool)
+    func updateUserProfileWithPostsDetail(detail : Profile?)
+    func updateUserProfileWithUserDetail(detail : Profile?)
     
 }
 extension LoginSignupViewModelProtocol {
@@ -29,6 +31,8 @@ extension LoginSignupViewModelProtocol {
     func updateForgetPasswordResult(with message:String?, success:Bool, token:String?){}
     func updateResendOtpResult(with message:String?, success:Bool, token:String){}
     func updateSetNewpasswordResult(with message:String?, success:Bool){}
+    func updateUserProfileWithPostsDetail(detail : Profile?){}
+    func updateUserProfileWithUserDetail(detail : Profile?){}
 }
 
 class UserLoginSignupViewModel {
@@ -66,6 +70,9 @@ class UserLoginSignupViewModel {
         case .LoginUser:
             do{
                 let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
+                if let t = signupResult.token {
+                    UserDefaultHelper.token = String(t)
+                }
                 self.delegate?.updateLoginResult(with: signupResult.message, success: signupResult.success ?? false)
             }catch{}
              break
@@ -129,6 +136,18 @@ class UserLoginSignupViewModel {
                 self.delegate?.updateSetNewpasswordResult(with: signupResult.message, success: signupResult.success ?? false)
             }catch{}
             //updateSetNewpasswordResult(with message:String?, success:Bool)
+            break
+        case .userProfile:
+            do{
+                let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
+                self.delegate?.updateUserProfileWithUserDetail(detail: signupResult.profile)
+            }catch{}
+            break
+        case .userProfileDetail:
+            do{
+                let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
+                self.delegate?.updateUserProfileWithPostsDetail(detail: signupResult.profile)
+            }catch{}
             break
         default:
     

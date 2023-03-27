@@ -57,6 +57,7 @@ class OnBoardController: UIViewController {
         else
         {
             self.dismiss(animated: false)
+            
         }
     }
 

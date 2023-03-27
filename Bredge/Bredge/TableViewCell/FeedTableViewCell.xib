@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,6 +43,10 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRh-Ar-kCQ">
                                         <rect key="frame" x="12" y="8.5" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="ZZV-y4-3m9"/>
+                                            <constraint firstAttribute="width" constant="44" id="anB-ys-OaS"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hagit Lonnie" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4J-sL-hEm">
@@ -211,7 +215,12 @@
                 <outlet property="btnComment" destination="eqF-NO-RW1" id="kId-IF-wwY"/>
                 <outlet property="btnFeedProfile" destination="YRh-Ar-kCQ" id="qdy-E5-jbw"/>
                 <outlet property="btnLike" destination="Fdv-sO-5Pl" id="aMC-Tb-i3j"/>
-                <outlet property="postTextLabel" destination="9Db-AL-xEh" id="z60-xC-WYT"/>
+                <outlet property="locationLable" destination="M7c-ns-g3E" id="exV-BR-SgQ"/>
+                <outlet property="moreOptionButton" destination="Y1f-CU-7Ds" id="dgV-0N-jvF"/>
+                <outlet property="postDescriptionLable" destination="9Db-AL-xEh" id="fng-Se-r5p"/>
+                <outlet property="postImage" destination="MaK-ct-ds6" id="bsM-qJ-P7K"/>
+                <outlet property="timeLable" destination="5Oa-35-4wi" id="7a1-YB-8Mm"/>
+                <outlet property="userNameLable" destination="Q4J-sL-hEm" id="mLG-Sj-StR"/>
             </connections>
             <point key="canvasLocation" x="176.81159420289856" y="210.9375"/>
         </tableViewCell>

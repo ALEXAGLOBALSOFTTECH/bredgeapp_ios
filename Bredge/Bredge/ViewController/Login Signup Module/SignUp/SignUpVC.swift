@@ -6,16 +6,18 @@
 //
 
 import UIKit
+//import ImagePicker
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
     static let nibName = "SignUpVC"
-    var rangeStart = Measurement(value: 3.0, unit: UnitLength.feet)
-    var rangeLength = Measurement(value: Double(100), unit: UnitLength.feet)
+    var rangeStart = Measurement(value: 1.0, unit: UnitLength.feet)
+    var rangeLength = Measurement(value: Double(20), unit: UnitLength.feet)
     var segments = Array<RKSegmentUnit>()
     var moreMarkers = false
     var colorOverridesEnabled = false
     @IBOutlet weak var rulerView: RKMultiUnitRuler!
     
+    @IBOutlet weak var profilepicImage: UIImageView!
     @IBOutlet weak var view1,view2,view3,view4:UIView!
     @IBOutlet weak var textFieldDate     :UITextField!
     @IBOutlet weak var textFieldGender   :UITextField!
@@ -42,9 +44,14 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         v.delegate = self
         return v
     }()
+    private lazy var imagePicker: ImagePickerProtocol = {
+          let imagePicker = ImagePicker(parentViewController: self)
+          return imagePicker
+      }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.profilepicImage.layer.cornerRadius = 25
         self.textViewBio.text = "Describe yourself"
         self.textViewBio.textColor = UIColor.lightGray
         self.genderPicker.delegate = self
@@ -74,6 +81,12 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         
     }
 
+    @IBAction func takePicktureButtonClick(_ sender: Any) {
+        imagePicker.startImagePicker(withSourceType: .photoLibrary) { [weak self] image in
+            self?.profilepicImage.image = image
+        }
+       
+    }
     @IBAction func BackBtnClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -178,33 +191,7 @@ extension SignUpVC {
         
         self.viewModel.execute(with: .UpdateProfile(parameter:[ "email": self.user_Email, "first_name": self.firstNameTF.text ?? "", "last_name": self.lastNameTF.text ?? "", "dob": self.textFieldDate.text ?? "", "contact": self.phoneNumberTF.text ?? "", "gender": self.textFieldGender.text ?? "", "marital_status": self.textFieldMarital.text ?? "", "height": "165", "height_unit": "Inch", "bio": self.textViewBio.text ?? "", "lat":"26.8467° N", "lon":"80.9462° E"] ))
         
-       /* let req = COHeader.userRegister(self.user_Email, self.firstNameTF.text ?? "", self.lastNameTF.text ?? "", self.textFieldDate.text ?? "", self.phoneNumberTF.text ?? "", self.textFieldGender.text ?? "", self.textFieldMarital.text ?? "", "165", "CM", self.textViewBio.text ?? "")
-        
-        TFSDataHelper.shared.postDataWith(request:req , serviceURL: BEnum.shared.S_Type(BEnum.B_Enum.UpdateProfile)) { isSuccess, resultDict in
-            
-            if (isSuccess == true) {
-                
-                DispatchQueue.main.async {
-                    let response:[String:Any] = resultDict
-
-                    print("Response_Data_ResponseData:\(resultDict):::\(response["success"] as? Bool ?? false)")
-                    if (response["success"] as? Bool ?? false) == true {
-
-//                        let dataOn = response["data"] as? [String:Any] ?? [:]
-//                        UserDefaults.sessionToken = self.tokenData
-//                        UserDefaults.isLoggedIn = true
-//                        UserDefaults.standard.synchronize()
-                        //self.showHome()
-                        
-                        let vc: SelectInterestsVC = SelectInterestsVC(nibName:SelectInterestsVC.nibName, bundle: nil)
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }else {
-                        
-                        self.present(BEnum.shared.showAlert(message: response["message"] as? String ?? ""), animated: true)
-                    }
-                }
-            }
-        }*/
+      
     }
 }
 extension SignUpVC : LoginSignupViewModelProtocol {
@@ -231,20 +218,20 @@ extension SignUpVC : RKMultiUnitRulerDataSource, RKMultiUnitRulerDelegate{
     
     func createSegments() -> Array<RKSegmentUnit> {
         let formatter = MeasurementFormatter()
-        formatter.unitStyle = .long
+        formatter.unitStyle = .short
         formatter.unitOptions = .providedUnit
         let ftSegment = RKSegmentUnit(name: "Ft.", unit: UnitLength.feet, formatter: formatter)
         
         ftSegment.name = "Ft."
         ftSegment.unit = UnitLength.feet
        
-        let ftMarkerTypeMax = RKRangeMarkerType(color: UIColor.blue, size: CGSize(width: 1.0, height: 50.0), scale: 20.0)
-        ftMarkerTypeMax.labelVisible = true
+        let ftMarkerTypeMax = RKRangeMarkerType(color: UIColor.blue, size: CGSize(width: 1.0, height: 50.0), scale: 1)
+        ftMarkerTypeMax.labelVisible = false
         
        
         ftSegment.markerTypes = [
-            RKRangeMarkerType(color: UIColor.purple, size: CGSize(width: 1.0, height: 20.0), scale: 5),
-            RKRangeMarkerType(color: UIColor.lightGray, size: CGSize(width: 2.0, height: 50.0), scale: 10.0)]
+            RKRangeMarkerType(color: UIColor.purple, size: CGSize(width: 1.0, height: 20.0), scale: 0.1),
+            RKRangeMarkerType(color: UIColor.darkGray, size: CGSize(width: 2.0, height: 50.0), scale: 0.5)]
         
         let cmsSegment = RKSegmentUnit(name: "cm", unit: UnitLength.centimeters, formatter: formatter)
         let cmsMarkerTypeMax = RKRangeMarkerType(color: UIColor.brown, size: CGSize(width: 1.0, height: 50.0), scale: 25.0)
@@ -288,7 +275,7 @@ extension SignUpVC : RKMultiUnitRulerDataSource, RKMultiUnitRulerDelegate{
             style.textFieldBackgroundColor = UIColor.clear
             // color override location:location+40% red , location+60%:location.100% green
         } else {
-            style.textFieldBackgroundColor = UIColor.red
+            style.textFieldBackgroundColor = UIColor.clear
         }
         if (colorOverridesEnabled) {
             style.colorOverrides = [
@@ -304,3 +291,6 @@ extension SignUpVC : RKMultiUnitRulerDataSource, RKMultiUnitRulerDelegate{
         print("value changed to \(measurement.doubleValue)")
     }
 }
+
+
+

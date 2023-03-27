@@ -16,14 +16,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        
+        //UserDefaultHelper.token = "1562740448"
         self.window = window
-        /*if UserDefaultHelper.isLoggedIn {
+        if UserDefaultHelper.isLoggedIn {
             showHome()
         } else {
             showSplash()
-        }*/
-        showSplash()
+        }
+        //showSplash()
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -66,15 +66,17 @@ extension SceneDelegate {
     
     func showSplash() {
         
-       // let viewController = BRSplashVC()
-        let viewController = SignUpVC(nibName:SignUpVC.nibName, bundle: nil)//SignUpVC.loadController()
+        let viewController = BRSplashVC()
+       // let viewController = SignUpVC(nibName:SignUpVC.nibName, bundle: nil)//SignUpVC.loadController()
         let navigation = UINavigationController(rootViewController: viewController)
         self.window?.rootViewController = navigation // Your initial view controller.
         self.window?.makeKeyAndVisible()
     }
     
     func showHome() {
-        window?.rootViewController = DashboardController.loadController()
+       // let viewController = EventListViewController(nibName:"EventListViewController", bundle: nil)
+        let navigation = UINavigationController(rootViewController: DashboardController.loadController())
+        window?.rootViewController = navigation/*viewController*/ //DashboardController.loadController()
         window?.makeKeyAndVisible()
     }
 }

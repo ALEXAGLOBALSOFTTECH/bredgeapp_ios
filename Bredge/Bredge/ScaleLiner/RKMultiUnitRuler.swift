@@ -191,16 +191,14 @@ public class RKMultiUnitRuler: UIView {
                 self.segmentControl.selectedSegmentIndex = 0
                 if let unit = dataSource.unitForSegmentAtIndex(index: 0).unit {
                     let style = dataSource.styleForUnit(unit)
-                    self.segmentControl.tintColor = UIColor.yellow
+                    self.segmentControl.setLayout(tintColor: UIColor(hexString: "A740E4"))
                     self.segmentControl.setTitleTextAttributes(
                         [NSAttributedString.Key.foregroundColor: style.textFieldTextColor,
                          NSAttributedString.Key.font: kDefaultSegmentControlTitleFont], for: .normal)
                 }
             }
             self.addSubview(self.segmentControl)
-            if let tintColor = self.tintColor {
-                self.segmentControl.tintColor = tintColor
-            }
+            
         }
         return self.segmentControl
     }
@@ -454,5 +452,42 @@ public class RKMultiUnitRuler: UIView {
         }
         updateScrollViews()
         updateTextFields()
+    }
+}
+
+extension UISegmentedControl {
+
+    func setLayout(tintColor: UIColor) {
+        if #available(iOS 13, *) {
+            let background = UIImage(color: .clear, size: CGSize(width: 2, height: 30))
+            let divider = UIImage(color: tintColor, size: CGSize(width: 2, height: 30))
+            self.setBackgroundImage(background, for: .normal, barMetrics: .default)
+            self.setBackgroundImage(divider, for: .selected, barMetrics: .default)
+            self.setDividerImage(divider, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+            self.layer.borderWidth = 2
+            self.layer.borderColor = tintColor.cgColor
+            self.setTitleTextAttributes([.foregroundColor: tintColor], for: .normal)
+            self.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+
+    } else {
+        self.tintColor = tintColor
+        }
+    }
+}
+
+extension UIImage {
+
+    convenience init(color: UIColor, size: CGSize) {
+
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+        color.set()
+        
+        let context = UIGraphicsGetCurrentContext()!
+        context.fill(CGRect(origin: .zero, size: size))
+        
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.init(data: image.pngData()!)!
     }
 }

@@ -76,9 +76,9 @@ class RKRangeTextView: UIControl, UITextFieldDelegate {
         let textField = UITextField(frame: self.bounds)
         textField.textAlignment = NSTextAlignment.center
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.isUserInteractionEnabled = true
+        textField.isUserInteractionEnabled = false
         textField.text = "0"
-        textField.keyboardType = .decimalPad
+       // textField.keyboardType = .decimalPad
         textField.delegate = self
         self.addSubview(textField)
         let views = ["textField": textField]

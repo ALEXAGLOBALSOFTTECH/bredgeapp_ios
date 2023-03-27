@@ -15,6 +15,13 @@ static let nibName = "FollowerProfileVC"
     @IBOutlet weak var bgImage: UIView!
     var arrStoryImage = [ "s_1","s_1","s_2","s_3","s_1"]
     @IBOutlet weak var messageStack: UIStackView!
+    
+    lazy var viewModel : UserLoginSignupViewModel = {
+        let v = UserLoginSignupViewModel()
+        v.delegate = self
+        return v
+    }()
+    
     var arrPhotoAndVideo = [ "s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,8 @@ static let nibName = "FollowerProfileVC"
         self.videoVollectionView.reloadData()
         self.bgImage.cornerRadius(usingCorners:[ .bottomLeft,.bottomRight], cornerRadit: CGSize(width:25, height: 25))
         // Do any additional setup after loading the view.
+        
+        self.viewModel.execute(with: .userProfile(parameter: ["token":UserDefaultHelper.token ?? ""]))
     }
     @IBAction func btnFollow(_ sender: UIButton) {
       
@@ -98,6 +107,20 @@ extension FollowerProfileVC: UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
+}
+
+extension FollowerProfileVC: LoginSignupViewModelProtocol {
+    func updateUserProfileWithPostsDetail(detail : Profile?){
+        DispatchQueue.main.async {
+            
+        }
+    }
+    func updateUserProfileWithUserDetail(detail : Profile?){
+        self.viewModel.execute(with: .userProfileDetail(parameter: ["token":UserDefaultHelper.token ?? ""]))
+         DispatchQueue.main.async {
+            
+         }
+    }
 }
 
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkingHelper {
     
@@ -55,9 +56,26 @@ class NetworkingHelper {
         var body = ""
         
         prams.keys.forEach { key in
-            body += "--\(boundry)\r\n"
-            body += "Content-Disposition:form-data; name=\"\(key)\""
-            if let val = prams[key] as? String {
+           
+            if let imgs = prams[key] as? [[String:UIImage]]{
+                imgs.forEach{img in
+                    body += "--\(boundry)\r\n"
+                    body += "Content-Disposition:form-data; name=\"\(key)\""
+                    
+                    img.keys.forEach{imgName in
+                        if let val = img[imgName],
+                            let d = val.pngData(),
+                            let s = String(data: d, encoding: .utf8){
+                            
+                            body += "; filename=\"\(key)\"\r\n" + "Content-Type: \"content-type header\"\r\n\r\n\(s)\r\n"
+                        }
+                    }
+                }
+               
+                
+            }else if let val = prams[key] as? String {
+                body += "--\(boundry)\r\n"
+                body += "Content-Disposition:form-data; name=\"\(key)\""
                 body += "\r\n\r\n\(val)\r\n"
             }
          }

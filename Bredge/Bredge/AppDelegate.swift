@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyAbQ4QlJvZso298hrgExxzGNGKBQpOWWOA")
-        GMSPlacesClient.provideAPIKey("AIzaSyAbQ4QlJvZso298hrgExxzGNGKBQpOWWOA")
+        GMSServices.provideAPIKey("AIzaSyDR6e4SUMbN6jSbeuwwICqFRQUdXvwm4Jc")
+        GMSPlacesClient.provideAPIKey("AIzaSyDR6e4SUMbN6jSbeuwwICqFRQUdXvwm4Jc")
         IQKeyboardManager.shared.enable = true
         UINavigationBar.appearance().isHidden = true
                 

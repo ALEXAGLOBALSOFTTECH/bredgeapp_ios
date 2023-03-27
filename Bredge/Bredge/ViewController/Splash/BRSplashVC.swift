@@ -24,9 +24,9 @@ class BRSplashVC: UIViewController {
     var timerTest : Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let array = [img1,img2,img3,img4,img5,img6,img7,img8]
-//        self.startTimer()
-//        self.repeatAnimateImagesChanges(images: array as NSArray, imageView: splashImageView)
+        let array = [img1,img2,img3,img4,img5,img6,img7,img8]
+        self.startTimer()
+        self.repeatAnimateImagesChanges(images: array as NSArray, imageView: splashImageView)
     }
 
     func startTimer () {
@@ -42,7 +42,7 @@ class BRSplashVC: UIViewController {
     
     @objc func timerActionTest()  {
       
-        let onboarding  = false // = UserDefaults.standard.bool(forKey: "OnBordingCompleted")
+        let onboarding  = UserDefaultHelper.onBordingCompleted
         
         DispatchQueue.main.async {
             
@@ -72,7 +72,7 @@ class BRSplashVC: UIViewController {
         let vc = OnBoardController()
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: {
-            UserDefaults.standard.set(true, forKey: "OnBordingCompleted")
+            UserDefaultHelper.onBordingCompleted = true
             self.setRootNavigationViewController()
         }
         )

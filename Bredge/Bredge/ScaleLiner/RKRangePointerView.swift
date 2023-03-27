@@ -17,8 +17,8 @@ public class RKRangePointerView: UIView {
 
     var shape: RKRangePointerShape = .triangle
     var sideOffset = kDefaultPointerLayerSideOffset
-    var fillColor: UIColor = UIColor.white
-    var lineColor: UIColor = UIColor.white
+    var fillColor: UIColor = UIColor.purple
+    var lineColor: UIColor = UIColor.purple
     var direction: RKLayerDirection = .horizontal
     var radius: CGFloat = 6.0
 

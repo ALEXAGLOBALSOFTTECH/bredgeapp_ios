@@ -28,6 +28,13 @@ final class UserDefaultHelper {
             return _get(valueForKay: .isLoggedIn) as? Bool ?? false
         }
     }
+    static var onBordingCompleted : Bool {
+        set{
+            _set(value: newValue, key: .OnBordingCompleted)
+        } get {
+            return _get(valueForKay: .OnBordingCompleted) as? Bool ?? false
+        }
+    }
    
     private static func _set(value: Any?, key: BRConstants.USerDefaultsKey) {
         UserDefaults().set(value, forKey: key.rawValue)
@@ -36,6 +43,7 @@ final class UserDefaultHelper {
     private static func _get(valueForKay key: BRConstants.USerDefaultsKey)-> Any? {
         return UserDefaults().value(forKey: key.rawValue)
     }
+    
 
 
 

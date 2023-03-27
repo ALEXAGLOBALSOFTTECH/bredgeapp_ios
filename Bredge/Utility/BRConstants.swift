@@ -18,6 +18,7 @@ class BRConstants : NSObject {
     enum USerDefaultsKey: String, CaseIterable {
         case token = "token"
         case isLoggedIn = "isLoggedIn"
+        case OnBordingCompleted = "OnBordingCompleted"
     }
     enum purpose : String{
         case createProfile

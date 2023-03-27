@@ -20,6 +20,24 @@ class AppUtility{
         
       return localDateString
     }
+   class func getInitialTime(currentTime: Date, interval: Int) -> String{
+        var components = Calendar.current.dateComponents([.minute, .hour], from: currentTime)
+        let minute = components.minute
+        let remainder = ceil(Float(minute!/interval))
+        let finalMinutes = Int(remainder * Float(interval)) + interval
+        components.setValue(finalMinutes, for: .minute)
+        guard let finalTime = Calendar.current.date(from: components) else { return ""}
+       return self.getDate(date: finalTime)
+    }
+   class func getDate(date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.timeZone = TimeZone.current
+        let time = dateFormatter.string(from: date)
+        print(time)
+        return time
+    }
+    
     
     class func addButtonForUIDatePicker(textField:UITextField , viewController:UIViewController , picker:UIDatePicker){
         let toolBar = UIToolbar()
@@ -51,7 +69,7 @@ class AppUtility{
     toolBar.barTintColor =  UIColor(red: 152/255.0, green: 51/255.0, blue: 234/255.0, alpha: 1.0)
       toolBar.tintColor = UIColor.white
       toolBar.sizeToFit()
-      let doneButton = UIBarButtonItem(title: "Submit", style: .plain, target: viewController, action: #selector(viewController.submitPicker(sender:)))
+          let doneButton = UIBarButtonItem(title: "Submit", style: .plain, target: viewController, action: #selector(viewController.submitPicker(sender:)))
       let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
       let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: viewController, action: #selector(viewController.cancelPicker(sender:)))
       

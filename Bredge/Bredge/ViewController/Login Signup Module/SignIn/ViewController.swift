@@ -213,8 +213,8 @@ extension ViewController {
     func showHome() {
         
         let w = self.view.window?.windowScene?.delegate as? SceneDelegate
-        
-              // let navigation = UINavigationController(rootViewController: viewController)
+        UserDefaultHelper.isLoggedIn = true
+          
         w?.window?.rootViewController = DashboardController.loadController() // Your initial view controller.
         w?.window?.makeKeyAndVisible()
     }

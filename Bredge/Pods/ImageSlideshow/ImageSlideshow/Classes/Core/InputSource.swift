@@ -49,7 +49,8 @@ open class ImageSource: NSObject, InputSource {
     }
 
     public func load(to imageView: UIImageView, with callback: @escaping (UIImage?) -> Void) {
-        imageView.image = image
+        
+       imageView.image = image
         callback(image)
     }
 }
@@ -57,19 +58,56 @@ open class ImageSource: NSObject, InputSource {
 /// Input Source to load an image from the main bundle
 @objcMembers
 open class BundleImageSource: NSObject, InputSource {
-    var imageString: String
-
+    var imageString: String?
+    var imgUrl : URL?
     /// Initializes a new Image Source with an image name from the main bundle
     /// - parameter imageString: name of the file in the application's main bundle
     public init(imageString: String) {
         self.imageString = imageString
         super.init()
     }
+    public init(imgUrl:URL){
+        self.imgUrl = imgUrl
+        super.init()
+    }
 
     public func load(to imageView: UIImageView, with callback: @escaping (UIImage?) -> Void) {
-        let image = UIImage(named: imageString)
-        imageView.image = image
-        callback(image)
+        if imageString == nil {
+            self.loadFromURL(to: imageView) { i in
+                callback(i)
+            }
+        }else{
+            let image = UIImage(named: imageString ?? "defaultCoverImage")
+            imageView.image = image
+            callback(image)
+        }
+        
+    }
+    public func loadFromURL(to imageUrl: UIImageView, with callback: @escaping (UIImage?) -> Void){
+        guard let img = imgUrl else {
+            let image = UIImage(named:"defaultCoverImage")
+            imageUrl.image = image
+            callback(image)
+            return
+        }
+        getData(from: img) { data, response, error in
+                guard let data = data, error == nil else {
+                    DispatchQueue.main.async() {
+                        let image = UIImage(named:"defaultCoverImage")
+                        imageUrl.image = image
+                        callback(image)
+                    }
+                    return
+                }
+                 // always update the UI from the main thread
+                DispatchQueue.main.async() {
+                    imageUrl.image = UIImage(data: data)
+                    callback(imageUrl.image)
+                }
+            }
+    }
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }
 
@@ -90,4 +128,5 @@ open class FileImageSource: NSObject, InputSource {
         imageView.image = image
         callback(image)
     }
+    
 }
