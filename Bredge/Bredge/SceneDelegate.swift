@@ -66,11 +66,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     
     func showSplash() {
-        
-       // let viewController = BRSplashVC()
-//        let viewController = SelectInterestsVC(nibName:SelectInterestsVC.nibName, bundle: nil)
-        //SignUpVC.loadController()
-        let viewController = (CreatePostVC.loadController())
+//        let viewController =  ViewController()
+          let viewController = BRSplashVC()
+//       let viewController = SelectInterestsVC(nibName:SelectInterestsVC.nibName, bundle: nil)
+//      let viewController = SignUpVC.loadController()
+//        let viewController = (CreatePostVC.loadController())
         let navigation = UINavigationController(rootViewController: viewController)
         self.window?.rootViewController = navigation // Your initial view controller.
         self.window?.makeKeyAndVisible()
