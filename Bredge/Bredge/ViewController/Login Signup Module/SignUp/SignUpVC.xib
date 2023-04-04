@@ -204,13 +204,39 @@
                                         <constraint firstAttribute="width" constant="100" id="j3b-4C-4wB"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="a75-uW-1e5">
-                                    <rect key="frame" x="186" y="186" width="50" height="50"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="a75-uW-1e5">
+                                    <rect key="frame" x="171" y="171" width="80" height="80"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="8DS-0h-aOk"/>
-                                        <constraint firstAttribute="width" constant="50" id="Vfz-Tk-KbT"/>
+                                        <constraint firstAttribute="height" constant="80" id="2Ln-gh-Stc"/>
+                                        <constraint firstAttribute="width" constant="80" id="9TP-62-k8o"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oN-jm-uvV">
+                                    <rect key="frame" x="251" y="221" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="dod-1A-9Yz"/>
+                                        <constraint firstAttribute="height" constant="30" id="w30-Qe-9Re"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" " image="pencil"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" name="F98AC7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="takePicktureButtonClick:" destination="-1" eventType="touchUpInside" id="UjN-5P-okH"/>
+                                    </connections>
+                                </button>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-Fp-Kfg" userLabel="emailView">
                                     <rect key="frame" x="25" y="296" width="364" height="60"/>
                                     <subviews>
@@ -531,32 +557,6 @@
                                     <color key="textColor" red="0.59607843140000005" green="0.20000000000000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oN-jm-uvV">
-                                    <rect key="frame" x="223" y="228" width="30" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="dod-1A-9Yz"/>
-                                        <constraint firstAttribute="height" constant="30" id="w30-Qe-9Re"/>
-                                    </constraints>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title=" " image="pencil"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                            <real key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                            <real key="value" value="0.5"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                            <color key="value" name="F98AC7"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                            <size key="value" width="0.0" height="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="takePicktureButtonClick:" destination="-1" eventType="touchUpInside" id="UjN-5P-okH"/>
-                                    </connections>
-                                </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6Y-R4-7Kw" customClass="RKMultiUnitRuler" customModule="Bredge" customModuleProvider="target">
                                     <rect key="frame" x="25" y="967" width="384" height="200"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -571,10 +571,11 @@
                                 <constraint firstItem="mbV-0z-mBn" firstAttribute="trailing" secondItem="XWD-rH-y8v" secondAttribute="trailing" id="2zy-tP-4zw"/>
                                 <constraint firstItem="iC2-Tt-WWf" firstAttribute="top" secondItem="daA-jA-foZ" secondAttribute="bottom" constant="15" id="3H7-NM-dof"/>
                                 <constraint firstItem="E8G-vx-npe" firstAttribute="top" secondItem="4Z5-qM-cZ7" secondAttribute="top" constant="2" id="3tz-XZ-0jO"/>
-                                <constraint firstItem="2oN-jm-uvV" firstAttribute="trailing" secondItem="a75-uW-1e5" secondAttribute="trailing" constant="17" id="4BV-5m-PYP"/>
                                 <constraint firstItem="Q6Y-R4-7Kw" firstAttribute="top" secondItem="KdA-89-Hm6" secondAttribute="bottom" constant="5" id="5yT-II-JOm"/>
                                 <constraint firstItem="FEE-6s-Feg" firstAttribute="leading" secondItem="jlE-6H-mze" secondAttribute="leading" id="63O-O8-hCp"/>
                                 <constraint firstItem="daA-jA-foZ" firstAttribute="top" secondItem="E8G-vx-npe" secondAttribute="bottom" id="6fz-wb-3ZQ"/>
+                                <constraint firstItem="2oN-jm-uvV" firstAttribute="leading" secondItem="woA-uA-3Ht" secondAttribute="trailing" constant="-10" id="7Bi-h4-dkd"/>
+                                <constraint firstItem="a75-uW-1e5" firstAttribute="centerX" secondItem="woA-uA-3Ht" secondAttribute="centerX" id="7jE-Le-jpt"/>
                                 <constraint firstItem="XWD-rH-y8v" firstAttribute="leading" secondItem="hSf-li-txf" secondAttribute="leading" id="83p-NA-Lvb"/>
                                 <constraint firstAttribute="trailing" secondItem="Q6Y-R4-7Kw" secondAttribute="trailing" constant="5" id="8vv-jR-vnY"/>
                                 <constraint firstItem="XWD-rH-y8v" firstAttribute="trailing" secondItem="hSf-li-txf" secondAttribute="trailing" id="FHB-C5-oYc"/>
@@ -586,13 +587,11 @@
                                 <constraint firstItem="UXh-R3-qVl" firstAttribute="top" secondItem="kHA-Fp-Kfg" secondAttribute="bottom" constant="15" id="QFX-pB-XhB"/>
                                 <constraint firstItem="jlE-6H-mze" firstAttribute="trailing" secondItem="mbV-0z-mBn" secondAttribute="trailing" id="SQ2-Qt-RFF"/>
                                 <constraint firstAttribute="trailing" secondItem="kHA-Fp-Kfg" secondAttribute="trailing" constant="25" id="U7L-Ta-1ep"/>
-                                <constraint firstItem="a75-uW-1e5" firstAttribute="centerX" secondItem="woA-uA-3Ht" secondAttribute="centerX" id="VPU-IW-a5T"/>
                                 <constraint firstItem="XWD-rH-y8v" firstAttribute="top" secondItem="hSf-li-txf" secondAttribute="bottom" constant="15" id="WrH-2R-R5e"/>
                                 <constraint firstItem="jlE-6H-mze" firstAttribute="top" secondItem="mbV-0z-mBn" secondAttribute="bottom" constant="15" id="XDL-1x-KBb"/>
                                 <constraint firstAttribute="trailing" secondItem="E8G-vx-npe" secondAttribute="trailing" constant="28" id="XGT-aq-1ee"/>
                                 <constraint firstItem="FEE-6s-Feg" firstAttribute="trailing" secondItem="jlE-6H-mze" secondAttribute="trailing" id="a1h-Wc-YZA"/>
                                 <constraint firstAttribute="bottom" secondItem="Q6Y-R4-7Kw" secondAttribute="bottom" constant="5" id="a2W-xf-cl8"/>
-                                <constraint firstItem="2oN-jm-uvV" firstAttribute="top" secondItem="a75-uW-1e5" secondAttribute="bottom" constant="-8" id="aSg-3f-PJA"/>
                                 <constraint firstItem="Q6Y-R4-7Kw" firstAttribute="leading" secondItem="4Z5-qM-cZ7" secondAttribute="leading" constant="25" id="bl5-m0-qNh"/>
                                 <constraint firstItem="hSf-li-txf" firstAttribute="top" secondItem="UXh-R3-qVl" secondAttribute="bottom" constant="15" id="btB-ew-0gJ"/>
                                 <constraint firstItem="jlE-6H-mze" firstAttribute="leading" secondItem="mbV-0z-mBn" secondAttribute="leading" id="dCC-xM-fhK"/>
@@ -602,8 +601,9 @@
                                 <constraint firstItem="hSf-li-txf" firstAttribute="leading" secondItem="UXh-R3-qVl" secondAttribute="leading" id="kqm-VX-tGZ"/>
                                 <constraint firstItem="UXh-R3-qVl" firstAttribute="leading" secondItem="kHA-Fp-Kfg" secondAttribute="leading" id="lyt-dx-jcQ"/>
                                 <constraint firstItem="kHA-Fp-Kfg" firstAttribute="top" secondItem="woA-uA-3Ht" secondAttribute="bottom" constant="35" id="mkM-hx-KrO"/>
+                                <constraint firstItem="2oN-jm-uvV" firstAttribute="bottom" secondItem="woA-uA-3Ht" secondAttribute="bottom" constant="-10" id="osW-KG-f9w"/>
+                                <constraint firstItem="a75-uW-1e5" firstAttribute="centerY" secondItem="woA-uA-3Ht" secondAttribute="centerY" id="oyt-8h-csn"/>
                                 <constraint firstItem="daA-jA-foZ" firstAttribute="leading" secondItem="E8G-vx-npe" secondAttribute="leading" id="rzd-dx-noi"/>
-                                <constraint firstItem="a75-uW-1e5" firstAttribute="centerY" secondItem="woA-uA-3Ht" secondAttribute="centerY" id="sdl-AB-Baf"/>
                                 <constraint firstItem="FEE-6s-Feg" firstAttribute="top" secondItem="jlE-6H-mze" secondAttribute="bottom" constant="15" id="wmx-1c-wwL"/>
                                 <constraint firstItem="kHA-Fp-Kfg" firstAttribute="leading" secondItem="4Z5-qM-cZ7" secondAttribute="leading" constant="25" id="x7t-Z9-0L7"/>
                                 <constraint firstItem="woA-uA-3Ht" firstAttribute="top" secondItem="iC2-Tt-WWf" secondAttribute="bottom" constant="38" id="yuA-E9-5P8"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 //import ImagePicker
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
@@ -16,6 +17,9 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     var moreMarkers = false
     var colorOverridesEnabled = false
     @IBOutlet weak var rulerView: RKMultiUnitRuler!
+    var lat : String = ""
+    var lon : String = ""
+    var address : String = ""
     
     @IBOutlet weak var profilepicImage: UIImageView!
     @IBOutlet weak var view1,view2,view3,view4:UIView!
@@ -48,6 +52,18 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
           let imagePicker = ImagePicker(parentViewController: self)
           return imagePicker
       }()
+    
+    //location manager
+       lazy var locationManager: CLLocationManager = {
+           var _locationManager = CLLocationManager()
+           _locationManager.delegate = self
+           _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+           _locationManager.activityType = . automotiveNavigation
+           _locationManager.distanceFilter = 10.0  // Movement threshold for new events
+         //  _locationManager.allowsBackgroundLocationUpdates = true // allow in background
+
+           return _locationManager
+       }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +92,14 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         rulerView?.measurement = NSMeasurement(
                    doubleValue: Double(initialValue),
                    unit: UnitLength.centimeters)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.locationManager.startUpdatingLocation()
+        }
+        
+       
     
-              
+        
         
     }
 
@@ -117,6 +139,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.profilepicImage.clipsToBounds = true
+        self.profilepicImage.layer.cornerRadius = self.profilepicImage.bounds.height/2
     }
 }
 
@@ -179,17 +206,45 @@ extension SignUpVC: UIPickerViewDataSource {
   }
 }
 
-extension SignUpVC {
+extension SignUpVC : CLLocationManagerDelegate {
     
+
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.lat = "\(locValue.latitude)"
+        self.lon = "\(locValue.longitude)"
+        CLGeocoder().reverseGeocodeLocation(locations[0]) { placemarks, error in
+            if let p = placemarks,  p.count > 0 {
+               
+                    self.displayLocationInfo(placemark: p[0] as CLPlacemark)
+                
+            }
+         }
+    }
+    
+    func displayLocationInfo(placemark: CLPlacemark) {
+            //stop updating location to save battery life
+            locationManager.stopUpdatingLocation()
+        
+             self.address = "\(placemark.locality ?? ""), \(placemark.postalCode ?? ""), \(placemark.administrativeArea ?? ""), \(placemark.country ?? "")"
+        
+        
+    }
+    
+
     
     //MARK: Login User
     func updateUserInfo() {
         
         self.view.endEditing(true)
         
-      
         
-        self.viewModel.execute(with: .UpdateProfile(parameter:[ "email": self.user_Email, "first_name": self.firstNameTF.text ?? "", "last_name": self.lastNameTF.text ?? "", "dob": self.textFieldDate.text ?? "", "contact": self.phoneNumberTF.text ?? "", "gender": self.textFieldGender.text ?? "", "marital_status": self.textFieldMarital.text ?? "", "height": "165", "height_unit": "Inch", "bio": self.textViewBio.text ?? "", "lat":"26.8467° N", "lon":"80.9462° E"] ))
+        let collection = ["BR_ProfileImage_":self.profilepicImage.image]
+        self.viewModel.execute(with: .uploadprofileimage(parameter: ["token":UserDefaultHelper.token ?? "", "image":[collection]]))
+        
+        self.viewModel.execute(with: .UpdateProfile(parameter:[ "email": self.user_Email, "first_name": self.firstNameTF.text ?? "", "last_name": self.lastNameTF.text ?? "", "dob": self.textFieldDate.text ?? "", "contact": self.phoneNumberTF.text ?? "", "gender": self.textFieldGender.text ?? "", "marital_status": self.textFieldMarital.text ?? "", "height": "165", "height_unit": "Inch", "bio": self.textViewBio.text ?? "", "lat":self.lat, "lon":self.lon , "remember_token" : UserDefaultHelper.token ?? "" , "address": self.address ]))
         
       
     }

@@ -23,9 +23,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowerProfileVC" customModule="Bredge" customModuleProvider="target">
             <connections>
                 <outlet property="bgImage" destination="TUz-Kh-ZPw" id="Yo6-WW-eLO"/>
+                <outlet property="bioLablel" destination="3JG-5U-Gug" id="d3Y-vb-aE3"/>
                 <outlet property="collectionView" destination="mjd-ry-oFd" id="QCE-pl-inK"/>
+                <outlet property="followButton" destination="QQJ-oN-ewM" id="RYg-Bm-WVg"/>
                 <outlet property="followStack" destination="vIv-wS-S3H" id="ZJu-kh-md2"/>
+                <outlet property="followerLbale" destination="0jR-km-mm9" id="auj-ET-hOx"/>
+                <outlet property="followingButton" destination="bbW-6L-SZg" id="ve8-nP-7ny"/>
+                <outlet property="followingLable" destination="gLY-XD-a39" id="fA0-tI-L3r"/>
                 <outlet property="messageStack" destination="sMM-OC-rhO" id="aXv-AE-9pX"/>
+                <outlet property="nameLable" destination="b1h-z7-Pg9" id="LxM-5M-HxD"/>
+                <outlet property="postLable" destination="3Pf-wS-5uF" id="aGY-le-FqC"/>
+                <outlet property="sendMessageButton" destination="jeR-yD-wl0" id="uCn-5U-ijs"/>
                 <outlet property="videoVollectionView" destination="9bN-7q-8wq" id="8gN-mT-GzS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -569,7 +577,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Group 10781" width="29" height="29.5"/>
+        <image name="Group 10781" width="57" height="59"/>
         <image name="back" width="24" height="24"/>
         <image name="chat" width="20.5" height="17.5"/>
         <image name="fb2" width="24" height="24"/>

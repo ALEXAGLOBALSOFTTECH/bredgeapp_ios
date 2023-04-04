@@ -38,5 +38,9 @@
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We&apos;d like to access your Photos</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We are caaessing location to provide local information</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We are caaessing location to provide local information</string>
 </dict>
 </plist>

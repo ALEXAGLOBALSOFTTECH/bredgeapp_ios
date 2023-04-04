@@ -19,6 +19,8 @@ protocol LoginSignupViewModelProtocol: AnyObject {
     func updateSetNewpasswordResult(with message:String?, success:Bool)
     func updateUserProfileWithPostsDetail(detail : Profile?)
     func updateUserProfileWithUserDetail(detail : Profile?)
+    func updateStoreUserIntrestResponse(success:Bool,message:String?)
+    func updateUserListResponse(detail:[UserList]?)
     
 }
 extension LoginSignupViewModelProtocol {
@@ -33,6 +35,8 @@ extension LoginSignupViewModelProtocol {
     func updateSetNewpasswordResult(with message:String?, success:Bool){}
     func updateUserProfileWithPostsDetail(detail : Profile?){}
     func updateUserProfileWithUserDetail(detail : Profile?){}
+    func updateStoreUserIntrestResponse(success:Bool,message:String?){}
+    func updateUserListResponse(detail:[UserList]?){}
 }
 
 class UserLoginSignupViewModel {
@@ -147,6 +151,20 @@ class UserLoginSignupViewModel {
             do{
                 let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
                 self.delegate?.updateUserProfileWithPostsDetail(detail: signupResult.profile)
+            }catch{}
+            break
+        case .storeUserIntrest:
+            do{
+                let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
+              
+                self.delegate?.updateStoreUserIntrestResponse(success: signupResult.success ?? false, message: signupResult.message)
+            }catch{}
+            break
+        case .getAllUserList:
+            do{
+                let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
+                
+                self.delegate?.updateUserListResponse(detail: signupResult.userList)
             }catch{}
             break
         default:

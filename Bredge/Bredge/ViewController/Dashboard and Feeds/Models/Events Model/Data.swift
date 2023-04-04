@@ -1,7 +1,7 @@
 
 
 import Foundation
-struct DataObject : Codable {
+class DataObject : Codable {
 	let id : Int?
 	let user_id : Int?
     let post_title : String?
@@ -25,11 +25,12 @@ struct DataObject : Codable {
     let images : String?
     let user_token : String?
     let address : String?
-    let likes : Int?
+    var likes : Int?
     let comments : Int?
     let image : String?
     let comment : String?
     let gender : String?
+    var liked : Int?
     
 
 	enum CodingKeys: String, CodingKey {
@@ -62,9 +63,10 @@ struct DataObject : Codable {
         case image = "image"
         case comment = "comment"
         case gender = "gender"
+        case liked = "liked"
 	}
 
-	init(from decoder: Decoder) throws {
+	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(Int.self, forKey: .id)
 		user_id = try values.decodeIfPresent(Int.self, forKey: .user_id)
@@ -94,6 +96,7 @@ struct DataObject : Codable {
         image = try values.decodeIfPresent(String.self, forKey: .image)
         comment = try values.decodeIfPresent(String.self, forKey: .comment)
         gender = try values.decodeIfPresent(String.self, forKey: .gender)
+        liked = try values.decodeIfPresent(Int.self, forKey: .liked)
         
 	}
 

@@ -23,6 +23,7 @@
                 <outlet property="commentLabel" destination="bfQ-Us-4vv" id="DwX-Q6-OhS"/>
                 <outlet property="descriptionLable" destination="KX7-8c-1va" id="OuD-Hz-hwh"/>
                 <outlet property="feedImageView" destination="XLA-63-glp" id="QFl-Wn-5p0"/>
+                <outlet property="likeUnlikeButton" destination="bxX-fY-EZq" id="xTP-BR-rLW"/>
                 <outlet property="likesLabel" destination="ZgW-25-Ehc" id="8nF-WS-4JB"/>
                 <outlet property="locationLabel" destination="VEb-N3-cKr" id="cyy-Ot-pgj"/>
                 <outlet property="profileImageButton" destination="Fpp-lx-I47" id="1FN-WA-aMd"/>
@@ -38,19 +39,25 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedView" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-63-glp">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpp-lx-I47">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpp-lx-I47">
                     <rect key="frame" x="16" y="730.5" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="44" id="XJe-Iy-Wju"/>
                         <constraint firstAttribute="height" constant="44" id="xdT-0n-1rE"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="profileImg"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" name="A740E4"/>
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="profileButtonClick:" destination="-1" eventType="touchUpInside" id="lZB-av-YLy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hagit Lonnie" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6Z-BQ-FhJ">
                     <rect key="frame" x="68" y="741" width="326" height="22.5"/>
@@ -88,14 +95,13 @@
                         <action selector="btnForward:" destination="-1" eventType="touchUpInside" id="Bnd-yq-1cg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-fY-EZq">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-fY-EZq">
                     <rect key="frame" x="371" y="631" width="28" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="28" id="34r-9W-gh2"/>
                         <constraint firstAttribute="height" constant="28" id="ojz-wa-Qsa"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="star"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                             <color key="value" name="A740E4"/>
@@ -210,8 +216,6 @@
         <image name="back" width="24" height="24"/>
         <image name="comment" width="21" height="21"/>
         <image name="feedView" width="187.5" height="406"/>
-        <image name="profileImg" width="44" height="44"/>
-        <image name="star" width="23.5" height="22.5"/>
         <image name="w_forward" width="25" height="21"/>
         <namedColor name="A740E4">
             <color red="0.65499997138977051" green="0.25099998712539673" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -15,10 +15,21 @@ class FollowPeopleVC: UIViewController,UITextFieldDelegate {
     var arrUserName = ["Mike Gosling","Tahira Laetitia","Benjamin Hyacinthe","Elpidius Chaska","Heidrich Keanna","Marwin Callista","Tiwonge Nacho","Meryem Alaya","Bibek Eleri"]
     var arrSelectedIndex = [IndexPath]() // This is selected cell Index array
     var arrSelectedData = [String]() //
+    
+    var userList : [UserList]?{
+        didSet{
+            self.userListTableView.reloadData()
+        }
+    }
     @IBOutlet weak var searchTextField: AppTextField! {
         didSet {
             searchTextField.setIcon(UIImage.init(named: "search")!)        }
     }
+    lazy var viewModel : UserLoginSignupViewModel = {
+        let v = UserLoginSignupViewModel()
+        v.delegate = self
+        return v
+    }()
     var attributedString = NSMutableAttributedString(string:"")
     var attrs : [NSAttributedString.Key : Any] = [
         NSAttributedString.Key.font : UIFont(name: "Poppins-SemiBold", size: 14.0) as Any,
@@ -27,10 +38,12 @@ class FollowPeopleVC: UIViewController,UITextFieldDelegate {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.userListTableView.register(UINib(nibName:FollowPeopleListCell.cell, bundle: nil),forCellReuseIdentifier: FollowPeopleListCell.cell)
         let buttonTitleStr = NSMutableAttributedString(string:"Skip", attributes:attrs)
         attributedString.append(buttonTitleStr)
         skipButton.setAttributedTitle(attributedString, for: .normal)
+        self.viewModel.execute(with: .getAllUserList(parameter: ["token":UserDefaultHelper.token ?? "", "page":"1"]))
     }
     @IBAction func BackBtnClicked(_ sender: Any) {
        goToPreviousController()
@@ -46,7 +59,7 @@ class FollowPeopleVC: UIViewController,UITextFieldDelegate {
 }
 extension FollowPeopleVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.arrUserImage.count
+        self.userList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,4 +98,12 @@ extension FollowPeopleVC: UITableViewDelegate,UITableViewDataSource{
     
     
     
+}
+
+extension FollowPeopleVC : LoginSignupViewModelProtocol{
+    func updateUserListResponse(detail:[UserList]?){
+        DispatchQueue.main.async {
+            self.userList = detail
+        }
+    }
 }

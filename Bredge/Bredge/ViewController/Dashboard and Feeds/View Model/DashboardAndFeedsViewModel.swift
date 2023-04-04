@@ -13,6 +13,8 @@ protocol DashboardAndFeedsViewModelProtocol: AnyObject {
     func postListResponse(with events:PostList?)
     func postLikeListResponse(with events:LikeList?)
     func postCommentListResponse(with events:CommentList?)
+    func postLikeUnlikeResponse(with events:CommonModel?)
+    func createPostResponse(with status: CommonModel?)
     
     
 }
@@ -22,6 +24,8 @@ extension DashboardAndFeedsViewModelProtocol {
     func postListResponse(with events:PostList?){}
     func postLikeListResponse(with events:LikeList?){}
     func postCommentListResponse(with events:CommentList?){}
+    func postLikeUnlikeResponse(with events:CommonModel?){}
+    func createPostResponse(with status: CommonModel?){}
     
 }
 
@@ -59,8 +63,8 @@ class DashboardAndFeedsViewModel {
         switch api {
         case .createPost:
             do{
-                let signupResult = try JSONDecoder().decode(BRSignupModel.self, from: data)
-               // self.delegate?.updateLoginResult(with: signupResult.message, success: signupResult.success ?? false)
+                let signupResult = try JSONDecoder().decode(CommonModel.self, from: data)
+                self.delegate?.createPostResponse(with: signupResult)
             }catch{}
              break
         case .allEvents, .myEvents:
@@ -99,6 +103,17 @@ class DashboardAndFeedsViewModel {
                 let likeList = try JSONDecoder().decode(MainCommentModel.self, from: data)
                 
                 self.delegate?.postCommentListResponse(with: likeList.commentList)
+                
+            }catch(let error){
+               print(error)
+            }
+            break
+            
+        case .likeUnlikePost:
+            do{
+                let likeList = try JSONDecoder().decode(CommonModel.self, from: data)
+                
+                self.delegate?.postLikeUnlikeResponse(with: likeList)
                 
             }catch(let error){
                print(error)

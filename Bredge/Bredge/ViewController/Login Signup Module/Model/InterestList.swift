@@ -7,6 +7,7 @@ struct InterestList : Codable {
 	let status : String?
 	let created_at : String?
 	let updated_at : String?
+    var isSelected : Bool = false
 
 	enum CodingKeys: String, CodingKey {
 

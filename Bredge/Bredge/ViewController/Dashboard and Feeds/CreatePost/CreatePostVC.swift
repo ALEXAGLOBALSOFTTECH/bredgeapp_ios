@@ -175,7 +175,13 @@ extension CreatePostVC : EventCollectionCellProtocol{
 
 extension CreatePostVC : DashboardAndFeedsViewModelProtocol {
    
-    
+    func createPostResponse(with status: CommonModel?){
+        if let s = status?.success, s == true{
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
     
 }
 

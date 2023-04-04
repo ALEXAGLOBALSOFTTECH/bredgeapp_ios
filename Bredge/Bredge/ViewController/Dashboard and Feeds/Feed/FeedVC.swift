@@ -44,6 +44,9 @@ static let nibName = "FeedVC"
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        if PostListData != nil {
+            self.tableView.reloadData()
+        }
     }
     override func viewDidLayoutSubviews() {
         self.btnCreatePost.applyGradient(colours: [UIColor.init(hexString: "#8925F0"), UIColor.init(hexString: "#F98AC7"), UIColor.init(hexString: "#F98AC7")], locations: [0.0, 0.5, 1.0])
@@ -80,6 +83,7 @@ static let nibName = "FeedVC"
         self.navigationController?.isNavigationBarHidden = true
         
     }
+    
    
 }
 extension FeedVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -166,6 +170,8 @@ extension FeedVC : FeedTableViewCellProtocol{
     }
     
     func tapOnImageProfile(for object: DataObject?) {
+        let vc = FollowerProfileVC.loadController()
+        vc.userId = "\(object?.user_id ?? 0)"
         self.pushToNextController(controllerName: FollowerProfileVC.loadController())
     }
     

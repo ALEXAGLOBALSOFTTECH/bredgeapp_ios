@@ -20,6 +20,7 @@
 		4ADE5AD8293E1F7800004332 /* TFSDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE5ABD293E1F7800004332 /* TFSDataHelper.swift */; };
 		4ADE5ADB293E205400004332 /* BEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE5ADA293E205400004332 /* BEnum.swift */; };
 		75D57AE9FCBA022A8F8EDA9D /* libPods-Bredge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B9F41374749A1731BE560C /* libPods-Bredge.a */; };
+		D65E853F29D424A400CD3B74 /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E853E29D424A400CD3B74 /* CommonModel.swift */; };
 		D6652F48297531DD00D2BA52 /* NetworkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6652F47297531DD00D2BA52 /* NetworkingProtocols.swift */; };
 		D66718DB2975732C00480099 /* UserLoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66718DA2975732B00480099 /* UserLoginSignupViewModel.swift */; };
 		D6672D7929752D9D0032388D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6672D7829752D9D0032388D /* Networking.swift */; };
@@ -46,6 +47,7 @@
 		D676E91629C7201000220CCB /* DashboardAndFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676E91529C7201000220CCB /* DashboardAndFeedsViewModel.swift */; };
 		D676E91829C7250000220CCB /* ImagesFromLibrery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676E91729C7250000220CCB /* ImagesFromLibrery.swift */; };
 		D678B4BC2976C04B00244769 /* InterestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678B4BB2976C04A00244769 /* InterestList.swift */; };
+		D67D3EC329DAD6280081354F /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D3EC229DAD6280081354F /* UserList.swift */; };
 		D699C44129AF549D00CE3748 /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699C44029AF549D00CE3748 /* RulerView.swift */; };
 		D6E5A83829B4B4B1004167BD /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5A83729B4B4B1004167BD /* ImagePicker.swift */; };
 		D8438DF428C7A1F900EBA342 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8438DF328C7A1F900EBA342 /* SceneDelegate.swift */; };
@@ -221,6 +223,7 @@
 		4ADE5ADA293E205400004332 /* BEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEnum.swift; sourceTree = "<group>"; };
 		85B9F41374749A1731BE560C /* libPods-Bredge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bredge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96B8B59009C1CCD99E81AF7 /* Pods-Bredge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bredge.release.xcconfig"; path = "Target Support Files/Pods-Bredge/Pods-Bredge.release.xcconfig"; sourceTree = "<group>"; };
+		D65E853E29D424A400CD3B74 /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		D6652F47297531DD00D2BA52 /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
 		D66718DA2975732B00480099 /* UserLoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginSignupViewModel.swift; sourceTree = "<group>"; };
 		D6672D7829752D9D0032388D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 		D676E91529C7201000220CCB /* DashboardAndFeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAndFeedsViewModel.swift; sourceTree = "<group>"; };
 		D676E91729C7250000220CCB /* ImagesFromLibrery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesFromLibrery.swift; sourceTree = "<group>"; };
 		D678B4BB2976C04A00244769 /* InterestList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestList.swift; sourceTree = "<group>"; };
+		D67D3EC229DAD6280081354F /* UserList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		D699C44029AF549D00CE3748 /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
 		D6E5A83729B4B4B1004167BD /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D8438DEE28C7A1F900EBA342 /* Bredge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bredge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -493,6 +497,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D65E853D29D4247300CD3B74 /* Common Model */ = {
+			isa = PBXGroup;
+			children = (
+				D65E853E29D424A400CD3B74 /* CommonModel.swift */,
+			);
+			path = "Common Model";
+			sourceTree = "<group>";
+		};
 		D6672D7629752D140032388D /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,6 +516,7 @@
 		D6672D7729752D1E0032388D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D67D3EC229DAD6280081354F /* UserList.swift */,
 				D66D12A529D199F000024348 /* Posts.swift */,
 				D66D12A329D1991F00024348 /* Profile.swift */,
 				D678B4BB2976C04A00244769 /* InterestList.swift */,
@@ -536,6 +549,7 @@
 				E05402CE28CBA1BF0017B449 /* SignUp */,
 				E02BA9DC28D0DA0F001C9AA7 /* Profile */,
 				D66A87BB29752575004A7310 /* SignIn */,
+				E0304E4028CCABD400E6EF17 /* Follow People */,
 				E05402D328CBAF8E0017B449 /* Select Interests */,
 			);
 			path = "Login Signup Module";
@@ -588,6 +602,7 @@
 		D66EB29329C9BD3000F08F00 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D65E853D29D4247300CD3B74 /* Common Model */,
 				D66D129E29D17FEA00024348 /* Comment Model */,
 				D66D129629D16A0600024348 /* Like Model */,
 				D66D129129D076CD00024348 /* Post Model */,
@@ -1050,7 +1065,6 @@
 				E051808328FF16E8006776E8 /* Notification */,
 				E068E7A628F87C7000D5ED22 /* Wallpaper */,
 				E0570C2F28D637180096A0E6 /* MessageList */,
-				E0304E4028CCABD400E6EF17 /* Follow People */,
 				E0304E3728CCAB3800E6EF17 /* Connect Social */,
 				E0304E3628CCAB1300E6EF17 /* Successful & Invite */,
 				D8E9B15A28CC7267003663AD /* OnBoardClasses */,
@@ -1348,6 +1362,7 @@
 				D66D12A229D180F400024348 /* MainCommentModel.swift in Sources */,
 				D66EB29A29C9BD7600F08F00 /* Links.swift in Sources */,
 				D8FA31F32901461C0060915E /* StoryCollectionViewCell.swift in Sources */,
+				D67D3EC329DAD6280081354F /* UserList.swift in Sources */,
 				E067803A28D73E3A00E7FE27 /* ConnectionVC.swift in Sources */,
 				D88D0FD328D8EDFB006B2D22 /* SettingsViewController.swift in Sources */,
 				E04B7A14292E38C100C7BE5D /* RKRangeLayer.swift in Sources */,
@@ -1385,6 +1400,7 @@
 				D8438DF428C7A1F900EBA342 /* SceneDelegate.swift in Sources */,
 				D86AF7C928FAD40A00E8FE17 /* Triangle.swift in Sources */,
 				E068B4B028D4E78C006B0ABF /* PhotoAndVideoCell.swift in Sources */,
+				D65E853F29D424A400CD3B74 /* CommonModel.swift in Sources */,
 				E022284028D8DD2000A6D38A /* LikesCell.swift in Sources */,
 				D852469B28D73439006CE251 /* RangeSeekSliderDelegate.swift in Sources */,
 				D86CC36229015F3A00165C1C /* AppDelegate.swift in Sources */,

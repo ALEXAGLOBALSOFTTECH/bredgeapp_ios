@@ -28,4 +28,8 @@ static let cell = "FollowPeopleListCell"
         // Configure the view for the selected state
     }
     
+    func drawCell(with userData:UserList?){
+        
+    }
+    
 }

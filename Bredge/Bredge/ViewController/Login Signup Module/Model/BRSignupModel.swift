@@ -8,6 +8,7 @@ struct BRSignupModel : Codable {
     let error : ErrorModel?
     let interestList : [InterestList]?
     let profile : Profile?
+    let userList : [UserList]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -17,6 +18,7 @@ struct BRSignupModel : Codable {
         case error = "error"
         case interestList = "interestList"
         case profile = "profile"
+        case userList = "userList"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -31,6 +33,7 @@ struct BRSignupModel : Codable {
         error = try values.decodeIfPresent(ErrorModel.self, forKey: .error)
         interestList = try values.decodeIfPresent([InterestList].self, forKey: .interestList)
         profile = try values.decodeIfPresent(Profile.self, forKey: .profile)
+        userList = try values.decodeIfPresent([UserList].self, forKey: .userList)
 	}
 
 }

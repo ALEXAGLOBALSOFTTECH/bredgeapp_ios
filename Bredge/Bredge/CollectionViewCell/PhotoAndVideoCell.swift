@@ -15,5 +15,17 @@ static let cell = "PhotoAndVideoCell"
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
+    func drawCell(with data:DataObject?){
+        if let imgs = data?.images{
+            let arr = imgs.components(separatedBy: ",")
+            if let f = arr.first,
+               let url = URL(string: "http://bregeapptest.in/public/posts/\(f)") {
+                self.setImage(with: url, imageView: self.imgView, button:nil )
+            }
+            
+        }
+    }
 
 }

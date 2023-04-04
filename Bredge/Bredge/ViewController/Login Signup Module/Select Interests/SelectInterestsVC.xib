@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectInterestsVC" customModule="Bredge" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="2Ho-9W-QAu" id="GHl-Sg-OAj"/>
+                <outlet property="flowLayout" destination="y78-qe-gQI" id="LjJ-L7-jCT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

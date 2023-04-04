@@ -9,6 +9,15 @@ import UIKit
 
 class FollowerProfileVC: UIViewController {
 static let nibName = "FollowerProfileVC"
+    
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var bioLablel: UILabel!
+    @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var sendMessageButton: UIButton!
+    @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var postLable: UILabel!
+    @IBOutlet weak var followingLable: UILabel!
+    @IBOutlet weak var followerLbale: UILabel!
     @IBOutlet weak var collectionView:UICollectionView!
     @IBOutlet weak var followStack: UIStackView!
     @IBOutlet weak var videoVollectionView:UICollectionView!
@@ -21,6 +30,13 @@ static let nibName = "FollowerProfileVC"
         v.delegate = self
         return v
     }()
+    var userId: String = ""
+    
+    var userPosts : [DataObject]? {
+        didSet{
+            self.videoVollectionView.reloadData()
+        }
+    }
     
     var arrPhotoAndVideo = [ "s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3","s_1","s_2","s_3"]
     override func viewDidLoad() {
@@ -32,7 +48,7 @@ static let nibName = "FollowerProfileVC"
         self.bgImage.cornerRadius(usingCorners:[ .bottomLeft,.bottomRight], cornerRadit: CGSize(width:25, height: 25))
         // Do any additional setup after loading the view.
         
-        self.viewModel.execute(with: .userProfile(parameter: ["token":UserDefaultHelper.token ?? ""]))
+        self.viewModel.execute(with: .userProfile(parameter: ["token":userId]))
     }
     @IBAction func btnFollow(_ sender: UIButton) {
       
@@ -76,7 +92,7 @@ extension FollowerProfileVC: UICollectionViewDelegate, UICollectionViewDataSourc
             return self.arrStoryImage.count
         }else
         {
-            return self.arrPhotoAndVideo.count
+            return self.userPosts?.count ?? 0
         }
         
     }
@@ -92,7 +108,8 @@ extension FollowerProfileVC: UICollectionViewDelegate, UICollectionViewDataSourc
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoAndVideoCell.cell, for: indexPath) as! PhotoAndVideoCell
           
-            cell.imgView.image = UIImage(named:self.arrPhotoAndVideo[indexPath.item])
+            //cell.imgView.image = UIImage(named:self.arrPhotoAndVideo[indexPath.item])
+            cell.drawCell(with: self.userPosts?[indexPath.row])
             return cell
         }
         
@@ -106,19 +123,30 @@ extension FollowerProfileVC: UICollectionViewDelegate, UICollectionViewDataSourc
             return CGSize(width:115, height: 115)
         }
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = FeedViewVC.loadController()
+        vc.postData = self.userPosts?[indexPath.row]
+        self.pushToNextController(controllerName: vc)
+    }
     
 }
 
 extension FollowerProfileVC: LoginSignupViewModelProtocol {
     func updateUserProfileWithPostsDetail(detail : Profile?){
         DispatchQueue.main.async {
-            
+            self.followerLbale.text = "\(detail?.followerCount ?? 0)"
+            self.followingLable.text = "\(detail?.followeringCount ?? 0)"
+            self.postLable.text = "\(detail?.postCount ?? 0)"
+            self.userPosts = detail?.posts?.dataObject
         }
     }
     func updateUserProfileWithUserDetail(detail : Profile?){
         self.viewModel.execute(with: .userProfileDetail(parameter: ["token":UserDefaultHelper.token ?? ""]))
          DispatchQueue.main.async {
-            
+             self.nameLable.text = "\(detail?.first_name ?? "")  \(detail?.last_name ?? "")"
+             self.bioLablel.text = detail?.bio
+             
          }
     }
 }

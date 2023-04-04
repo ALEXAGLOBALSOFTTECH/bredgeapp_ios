@@ -16,8 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        //UserDefaultHelper.token = "1562740448"
+        UserDefaultHelper.token = "7946835289"
         self.window = window
+        //UserDefaultHelper.isLoggedIn = false
         if UserDefaultHelper.isLoggedIn {
             showHome()
         } else {
@@ -66,8 +67,8 @@ extension SceneDelegate {
     
     func showSplash() {
         
-        let viewController = BRSplashVC()
-       // let viewController = SignUpVC(nibName:SignUpVC.nibName, bundle: nil)//SignUpVC.loadController()
+       // let viewController = BRSplashVC()
+        let viewController = SelectInterestsVC(nibName:SelectInterestsVC.nibName, bundle: nil)//SignUpVC.loadController()
         let navigation = UINavigationController(rootViewController: viewController)
         self.window?.rootViewController = navigation // Your initial view controller.
         self.window?.makeKeyAndVisible()
