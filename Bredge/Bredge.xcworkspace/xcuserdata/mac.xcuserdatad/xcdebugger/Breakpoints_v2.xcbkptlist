@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "28C0B805-C78B-47EC-A5AF-67A487A22901"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bredge/ViewController/Follow People/FollowPeopleVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FollowPeopleVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - 10c118981c8b28c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.arrUserName.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - b833b25ab75165bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.arrUserName.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - 58e26ac314b5bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.arrUserName.modify : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - 67d86e4812904557"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.arrUserName.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - 53e7bba2bb806b98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Bredge.FollowPeopleVC"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "773">
+               </Location>
+               <Location
+                  uuid = "2FAD60DF-4114-4D71-8F72-62DAD5AB8242 - 10fed6e7be56a33c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bredge.FollowPeopleVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Bredge.FollowPeopleVC&gt;"
+                  moduleName = "Bredge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/bredgeapp_ios/Bredge/Bredge/ViewController/Follow%20People/FollowPeopleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "721">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
