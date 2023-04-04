@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -43,16 +43,16 @@
                             <state key="normal" backgroundImage="backButton"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                    <real key="value" value="4"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="1"/>
+                                    <real key="value" value="0.5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                    <size key="value" width="1" height="1"/>
+                                    <size key="value" width="0.0" height="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="value" name="F98AC7"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
@@ -79,7 +79,7 @@
                     <rect key="frame" x="16" y="110" width="382" height="55"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-i5-50A" customClass="AppTextField" customModule="Bredge" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="5" width="382" height="45"/>
+                            <rect key="frame" x="10" y="5" width="372" height="45"/>
                             <color key="textColor" name="spaceCadetColor"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
@@ -97,7 +97,7 @@
                     <constraints>
                         <constraint firstItem="hHs-i5-50A" firstAttribute="top" secondItem="d3m-sv-8Ke" secondAttribute="top" constant="5" id="9dw-dv-5wA"/>
                         <constraint firstAttribute="trailing" secondItem="hHs-i5-50A" secondAttribute="trailing" id="C91-Hu-zRp"/>
-                        <constraint firstItem="hHs-i5-50A" firstAttribute="leading" secondItem="d3m-sv-8Ke" secondAttribute="leading" id="Psl-ia-sOS"/>
+                        <constraint firstItem="hHs-i5-50A" firstAttribute="leading" secondItem="d3m-sv-8Ke" secondAttribute="leading" constant="10" id="Psl-ia-sOS"/>
                         <constraint firstAttribute="height" constant="55" id="rCw-xE-2Kb"/>
                         <constraint firstAttribute="bottom" secondItem="hHs-i5-50A" secondAttribute="bottom" constant="5" id="rLt-aO-5yE"/>
                     </constraints>
@@ -108,7 +108,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aCf-FR-qUV">
-                    <rect key="frame" x="0.0" y="175" width="414" height="721"/>
+                    <rect key="frame" x="0.0" y="180" width="414" height="716"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="1EJ-V5-qy4"/>
@@ -119,7 +119,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="aCf-FR-qUV" firstAttribute="top" secondItem="d3m-sv-8Ke" secondAttribute="bottom" constant="10" id="BJO-LZ-yjW"/>
+                <constraint firstItem="aCf-FR-qUV" firstAttribute="top" secondItem="d3m-sv-8Ke" secondAttribute="bottom" constant="15" id="BJO-LZ-yjW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aCf-FR-qUV" secondAttribute="trailing" id="CYk-ER-QaA"/>
                 <constraint firstItem="fCb-7E-jcT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GOb-WV-Xhe"/>
                 <constraint firstItem="d3m-sv-8Ke" firstAttribute="top" secondItem="fCb-7E-jcT" secondAttribute="bottom" constant="10" id="UUQ-a2-HJ9"/>
@@ -135,6 +135,9 @@
     </objects>
     <resources>
         <image name="backButton" width="21.5" height="22"/>
+        <namedColor name="F98AC7">
+            <color red="0.97600001096725464" green="0.54100000858306885" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="spaceCadetColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

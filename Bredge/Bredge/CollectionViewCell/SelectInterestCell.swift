@@ -15,5 +15,4 @@ static let cell = "SelectInterestCell"
         super.awakeFromNib()
         // Initialization code
     }
-
 }
