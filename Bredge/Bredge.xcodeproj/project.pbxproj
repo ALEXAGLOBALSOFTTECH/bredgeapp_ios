@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408C64629E3DB5500056F6A /* detailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408C64429E3DB5500056F6A /* detailTableViewCell.swift */; };
+		0408C64729E3DB5500056F6A /* detailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0408C64529E3DB5500056F6A /* detailTableViewCell.xib */; };
 		0430D31F29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */; };
 		0430D32029DE9C8300A9EFE1 /* SubscriptiondetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */; };
 		047CEECA29A3744C00404BFA /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CEEC829A3744C00404BFA /* LogInController.swift */; };
@@ -215,6 +217,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0408C64429E3DB5500056F6A /* detailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableViewCell.swift; sourceTree = "<group>"; };
+		0408C64529E3DB5500056F6A /* detailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailTableViewCell.xib; sourceTree = "<group>"; };
 		0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptiondetailVC.swift; sourceTree = "<group>"; };
 		0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptiondetailVC.xib; sourceTree = "<group>"; };
 		047CEEC829A3744C00404BFA /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
@@ -449,6 +453,8 @@
 				04859A6E29DD97AC0022C7DD /* SubscriptionCell.xib */,
 				0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */,
 				0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */,
+				0408C64429E3DB5500056F6A /* detailTableViewCell.swift */,
+				0408C64529E3DB5500056F6A /* detailTableViewCell.xib */,
 			);
 			name = Subscription;
 			sourceTree = "<group>";
@@ -1273,6 +1279,7 @@
 				D8FA31F0290115220060915E /* ReceiverMessageCell.xib in Resources */,
 				D8FA31F0290115220060915E /* ReceiverMessageCell.xib in Resources */,
 				D8438E2528C7AAC700EBA342 /* Poppins-BlackItalic.otf in Resources */,
+				0408C64729E3DB5500056F6A /* detailTableViewCell.xib in Resources */,
 				E051808A28FF172B006776E8 /* NotificationVC.xib in Resources */,
 				D8438E1E28C7AAC700EBA342 /* Poppins-BoldItalic.otf in Resources */,
 				D86496E228D7A0DC0079683E /* AdventureCell.xib in Resources */,
@@ -1485,6 +1492,7 @@
 				E05DE5C828C8ED260091D095 /* BRSplashVC.swift in Sources */,
 				D86496E128D7A0DC0079683E /* AdventureCell.swift in Sources */,
 				D8C82BED28D38D0B00032991 /* MapController.swift in Sources */,
+				0408C64629E3DB5500056F6A /* detailTableViewCell.swift in Sources */,
 				D8D2438329166D1F004BB924 /* SSASideMenu.swift in Sources */,
 				E04B7A13292E38C100C7BE5D /* Constant.swift in Sources */,
 				E0B55ADD28CDB63500CF12F9 /* SetNewPasswordVC.swift in Sources */,

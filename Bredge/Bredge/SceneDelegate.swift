@@ -66,7 +66,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     
     func showSplash() {
-        let viewController =  SubscriptiondetailVC()
+        let viewController =  SubscriptionVC()
 //        let viewController =  ViewController()
 //         let viewController = BRSplashVC()
 //       let viewController = SubscriptionVC(nibName:SubscriptionVC.nibName, bundle: nil)
