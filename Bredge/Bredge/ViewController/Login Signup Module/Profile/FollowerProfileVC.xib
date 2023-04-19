@@ -52,9 +52,6 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-Gc-oqM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="582"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_1522335653-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Nw-1S-X9Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
-                                        </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUz-Kh-ZPw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
                                             <subviews>
@@ -403,7 +400,7 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="20"/>
+                                                    <real key="value" value="30"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -414,7 +411,6 @@
                                         <constraint firstItem="TUz-Kh-ZPw" firstAttribute="leading" secondItem="x3X-Gc-oqM" secondAttribute="leading" id="4zz-e9-vwF"/>
                                         <constraint firstItem="Bka-HI-d3d" firstAttribute="centerX" secondItem="1MD-k3-uf4" secondAttribute="centerX" id="Fq4-tb-4Wu"/>
                                         <constraint firstItem="BqV-Wd-1AY" firstAttribute="centerX" secondItem="A59-uK-UYG" secondAttribute="centerX" id="HJ2-Sp-5kn"/>
-                                        <constraint firstAttribute="trailing" secondItem="3Nw-1S-X9Y" secondAttribute="trailing" id="JSF-md-3lF"/>
                                         <constraint firstItem="A59-uK-UYG" firstAttribute="centerX" secondItem="6ke-UM-Pac" secondAttribute="centerX" id="M1Y-1f-QfN"/>
                                         <constraint firstAttribute="trailing" secondItem="TUz-Kh-ZPw" secondAttribute="trailing" id="Rd3-YJ-DS2"/>
                                         <constraint firstItem="TX1-yI-sA1" firstAttribute="centerY" secondItem="1MD-k3-uf4" secondAttribute="centerY" id="U2z-Ee-EHN"/>
@@ -430,11 +426,8 @@
                                         <constraint firstItem="1MD-k3-uf4" firstAttribute="centerX" secondItem="BqV-Wd-1AY" secondAttribute="centerX" id="kB1-bW-YZr"/>
                                         <constraint firstItem="D3o-gq-kxt" firstAttribute="centerY" secondItem="BqV-Wd-1AY" secondAttribute="centerY" id="kHX-Dx-5FG"/>
                                         <constraint firstItem="D3o-gq-kxt" firstAttribute="leading" secondItem="BqV-Wd-1AY" secondAttribute="trailing" constant="5" id="mqY-Ec-8nj"/>
-                                        <constraint firstAttribute="bottom" secondItem="3Nw-1S-X9Y" secondAttribute="bottom" constant="-18" id="nd9-VZ-L7f"/>
-                                        <constraint firstItem="3Nw-1S-X9Y" firstAttribute="leading" secondItem="x3X-Gc-oqM" secondAttribute="leading" id="q7Y-3M-MRr"/>
                                         <constraint firstItem="1MD-k3-uf4" firstAttribute="top" secondItem="BqV-Wd-1AY" secondAttribute="bottom" constant="5" id="rFB-VB-IjL"/>
                                         <constraint firstItem="JEJ-ks-dgs" firstAttribute="centerY" secondItem="A59-uK-UYG" secondAttribute="centerY" id="tg9-NZ-VTX"/>
-                                        <constraint firstItem="3Nw-1S-X9Y" firstAttribute="top" secondItem="x3X-Gc-oqM" secondAttribute="top" id="uHy-we-fzY"/>
                                         <constraint firstAttribute="trailing" secondItem="NDa-qp-rEa" secondAttribute="trailing" id="vQn-Ya-fBm"/>
                                         <constraint firstItem="TUz-Kh-ZPw" firstAttribute="top" secondItem="x3X-Gc-oqM" secondAttribute="top" id="zBZ-K1-k8w"/>
                                     </constraints>
@@ -577,7 +570,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Group 10781" width="57" height="59"/>
+        <image name="Group 10781" width="29" height="29.5"/>
         <image name="back" width="24" height="24"/>
         <image name="chat" width="20.5" height="17.5"/>
         <image name="fb2" width="24" height="24"/>
@@ -589,7 +582,6 @@
         <image name="resto" width="24" height="24"/>
         <image name="resto2" width="24" height="24"/>
         <image name="resto4" width="24" height="24"/>
-        <image name="shutterstock_1522335653-1" width="375" height="561"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

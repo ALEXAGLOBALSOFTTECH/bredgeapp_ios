@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408C64629E3DB5500056F6A /* detailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408C64429E3DB5500056F6A /* detailTableViewCell.swift */; };
+		0408C64729E3DB5500056F6A /* detailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0408C64529E3DB5500056F6A /* detailTableViewCell.xib */; };
+		0430D31F29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */; };
+		0430D32029DE9C8300A9EFE1 /* SubscriptiondetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */; };
 		047CEECA29A3744C00404BFA /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CEEC829A3744C00404BFA /* LogInController.swift */; };
 		047CEECB29A3744C00404BFA /* LogInController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047CEEC929A3744C00404BFA /* LogInController.xib */; };
+		04859A6F29DD97AC0022C7DD /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04859A6D29DD97AC0022C7DD /* SubscriptionCell.swift */; };
+		04859A7029DD97AC0022C7DD /* SubscriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04859A6E29DD97AC0022C7DD /* SubscriptionCell.xib */; };
 		04ACAE4A29A4CA9900C64A53 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACAE4829A4CA9900C64A53 /* SignUpController.swift */; };
 		04ACAE4B29A4CA9900C64A53 /* SignUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04ACAE4929A4CA9900C64A53 /* SignUpController.xib */; };
+		04BD584F29DD7B150096300F /* SubscriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD584D29DD7B150096300F /* SubscriptionVC.swift */; };
+		04BD585029DD7B150096300F /* SubscriptionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BD584E29DD7B150096300F /* SubscriptionVC.xib */; };
 		04E8F73C29ADE9B3008CC676 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8F73A29ADE9B3008CC676 /* CameraController.swift */; };
 		04E8F73D29ADE9B3008CC676 /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E8F73B29ADE9B3008CC676 /* CameraController.xib */; };
 		4A4370A829434AC400E0EAB3 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4370A729434AC400E0EAB3 /* UserDefault.swift */; };
@@ -209,10 +217,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0408C64429E3DB5500056F6A /* detailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableViewCell.swift; sourceTree = "<group>"; };
+		0408C64529E3DB5500056F6A /* detailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailTableViewCell.xib; sourceTree = "<group>"; };
+		0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptiondetailVC.swift; sourceTree = "<group>"; };
+		0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptiondetailVC.xib; sourceTree = "<group>"; };
 		047CEEC829A3744C00404BFA /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		047CEEC929A3744C00404BFA /* LogInController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInController.xib; sourceTree = "<group>"; };
+		04859A6D29DD97AC0022C7DD /* SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
+		04859A6E29DD97AC0022C7DD /* SubscriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCell.xib; sourceTree = "<group>"; };
 		04ACAE4829A4CA9900C64A53 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		04ACAE4929A4CA9900C64A53 /* SignUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpController.xib; sourceTree = "<group>"; };
+		04BD584D29DD7B150096300F /* SubscriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionVC.swift; sourceTree = "<group>"; };
+		04BD584E29DD7B150096300F /* SubscriptionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionVC.xib; sourceTree = "<group>"; };
 		04E8F73A29ADE9B3008CC676 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		04E8F73B29ADE9B3008CC676 /* CameraController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
 		4A4370A729434AC400E0EAB3 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
@@ -428,6 +444,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04BD584429DD76440096300F /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				04BD584D29DD7B150096300F /* SubscriptionVC.swift */,
+				04BD584E29DD7B150096300F /* SubscriptionVC.xib */,
+				04859A6D29DD97AC0022C7DD /* SubscriptionCell.swift */,
+				04859A6E29DD97AC0022C7DD /* SubscriptionCell.xib */,
+				0430D31D29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift */,
+				0430D31E29DE9C8300A9EFE1 /* SubscriptiondetailVC.xib */,
+				0408C64429E3DB5500056F6A /* detailTableViewCell.swift */,
+				0408C64529E3DB5500056F6A /* detailTableViewCell.xib */,
+			);
+			name = Subscription;
+			sourceTree = "<group>";
+		};
 		04E8F73929ADE961008CC676 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -1057,6 +1088,7 @@
 		E05DE5C428C8ECFD0091D095 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				04BD584429DD76440096300F /* Subscription */,
 				D676E91329C71F6400220CCB /* Dashboard and Feeds */,
 				D66A87BC297525F0004A7310 /* Login Signup Module */,
 				E04FAAFB2901A1A60045E72B /* Wallpaper Preview */,
@@ -1204,6 +1236,7 @@
 			files = (
 				D66EB29D29C9CEFA00F08F00 /* EventViewController.xib in Resources */,
 				D66734B429758299006F7703 /* SignupViewController.xib in Resources */,
+				0430D32029DE9C8300A9EFE1 /* SubscriptiondetailVC.xib in Resources */,
 				D8438E1C28C7AAC700EBA342 /* Poppins-SemiBold.otf in Resources */,
 				E051809028FF17EE006776E8 /* ChatVC.xib in Resources */,
 				E02FF6582900647D002E97D5 /* BottomSheetCell.xib in Resources */,
@@ -1246,6 +1279,7 @@
 				D8FA31F0290115220060915E /* ReceiverMessageCell.xib in Resources */,
 				D8FA31F0290115220060915E /* ReceiverMessageCell.xib in Resources */,
 				D8438E2528C7AAC700EBA342 /* Poppins-BlackItalic.otf in Resources */,
+				0408C64729E3DB5500056F6A /* detailTableViewCell.xib in Resources */,
 				E051808A28FF172B006776E8 /* NotificationVC.xib in Resources */,
 				D8438E1E28C7AAC700EBA342 /* Poppins-BoldItalic.otf in Resources */,
 				D86496E228D7A0DC0079683E /* AdventureCell.xib in Resources */,
@@ -1261,12 +1295,14 @@
 				E02FF65D29006FA7002E97D5 /* CommentSecond.xib in Resources */,
 				E068E7AE28F87D5F00D5ED22 /* WallpaperCell.xib in Resources */,
 				D8438DF928C7A1F900EBA342 /* Main.storyboard in Resources */,
+				04859A7029DD97AC0022C7DD /* SubscriptionCell.xib in Resources */,
 				E0570C3728D63AEA0096A0E6 /* MessageListCell.xib in Resources */,
 				D86AF7C528FA908400E8FE17 /* MakeReservationsController.xib in Resources */,
 				D8438E2828C7AAC700EBA342 /* Poppins-Italic.otf in Resources */,
 				E0B73A9528CFAF360026592D /* FeedTableViewCell.xib in Resources */,
 				E022283D28D8DBC600A6D38A /* LikesVC.xib in Resources */,
 				D8438E2128C7AAC700EBA342 /* Poppins-ThinItalic.otf in Resources */,
+				04BD585029DD7B150096300F /* SubscriptionVC.xib in Resources */,
 				D8438E2728C7AAC700EBA342 /* Poppins-ExtraBold.otf in Resources */,
 				E00C208228CF8EDE00D1DDF8 /* FeedVC.xib in Resources */,
 				047CEECB29A3744C00404BFA /* LogInController.xib in Resources */,
@@ -1377,6 +1413,7 @@
 				D8FA31EF290115220060915E /* ReceiverMessageCell.swift in Sources */,
 				E022283728D8D6C600A6D38A /* CommentsCell.swift in Sources */,
 				D66D129A29D16A4400024348 /* MainLikeModel.swift in Sources */,
+				04859A6F29DD97AC0022C7DD /* SubscriptionCell.swift in Sources */,
 				E022282A28D8CC6D00A6D38A /* SpinController.swift in Sources */,
 				E0B55AD828CDB31B00CF12F9 /* ForgotPasswordVC.swift in Sources */,
 				4ADE5AD8293E1F7800004332 /* TFSDataHelper.swift in Sources */,
@@ -1390,6 +1427,7 @@
 				D66D12A429D1991F00024348 /* Profile.swift in Sources */,
 				E051808F28FF17EE006776E8 /* ChatVC.swift in Sources */,
 				D66EB29829C9BD7600F08F00 /* MainEventsList.swift in Sources */,
+				0430D31F29DE9C8300A9EFE1 /* SubscriptiondetailVC.swift in Sources */,
 				D8FA31F2290146130060915E /* MakeReservationsController.swift in Sources */,
 				E077C1C429005FCC004A948E /* BottomSheet.swift in Sources */,
 				D67568BB2976A52C0081C0E3 /* ErrorModel.swift in Sources */,
@@ -1444,6 +1482,7 @@
 				D8F9803B28FF10BF002D4E34 /* ChatViewController.swift in Sources */,
 				D8C82BF328D3991F00032991 /* EventViewController.swift in Sources */,
 				D8EE4D0628D238CD00BB9726 /* CustomFloatButton.swift in Sources */,
+				04BD584F29DD7B150096300F /* SubscriptionVC.swift in Sources */,
 				E022283328D8D26C00A6D38A /* CommentsVC.swift in Sources */,
 				D66EB29929C9BD7600F08F00 /* EventList.swift in Sources */,
 				E051808828FF172B006776E8 /* NotificationVC.swift in Sources */,
@@ -1453,6 +1492,7 @@
 				E05DE5C828C8ED260091D095 /* BRSplashVC.swift in Sources */,
 				D86496E128D7A0DC0079683E /* AdventureCell.swift in Sources */,
 				D8C82BED28D38D0B00032991 /* MapController.swift in Sources */,
+				0408C64629E3DB5500056F6A /* detailTableViewCell.swift in Sources */,
 				D8D2438329166D1F004BB924 /* SSASideMenu.swift in Sources */,
 				E04B7A13292E38C100C7BE5D /* Constant.swift in Sources */,
 				E0B55ADD28CDB63500CF12F9 /* SetNewPasswordVC.swift in Sources */,
