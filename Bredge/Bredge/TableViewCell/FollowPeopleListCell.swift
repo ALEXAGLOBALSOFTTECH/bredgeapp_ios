@@ -27,8 +27,31 @@ static let cell = "FollowPeopleListCell"
 
         // Configure the view for the selected state
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.userProfile.layer.cornerRadius = 22
+        self.userProfile.clipsToBounds = true
+        
+    }
     
     func drawCell(with userData:UserList?){
+        if let i = userData?.image, let url = URL(string: "http://bregeapptest.in/public/profile_image/\(i)") {
+            self.setImage(with: url, imageView: self.userProfile, button: nil)
+        
+        }
+        self.followerCountLable.text = "\(userData?.followerCount ?? 0) Followers"
+        self.userNameLable.text = "\(userData?.first_name ?? "") \(userData?.last_name ?? "")"
+        if let following = userData?.following {
+            if following == 0 {
+                self.viewFollow.backgroundColor = UIColor.white
+                self.lblFollow.textColor = UIColor.init(hexString: "#9833EA")
+                self.lblFollow.text = "Follow"
+            }else{
+                self.viewFollow.backgroundColor = UIColor.init(hexString: "#A740E4")
+                self.lblFollow.textColor = UIColor.white
+                self.lblFollow.text = "Unfollow"
+            }
+        }
         
     }
     

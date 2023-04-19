@@ -45,6 +45,10 @@ class FollowPeopleVC: UIViewController,UITextFieldDelegate {
         skipButton.setAttributedTitle(attributedString, for: .normal)
         self.viewModel.execute(with: .getAllUserList(parameter: ["token":UserDefaultHelper.token ?? "", "page":"1"]))
     }
+    
+    @IBAction func skipButtonClick(_ sender: Any) {
+        self.pushToNextController(controllerName: Successful_InviteVC.loadController())
+    }
     @IBAction func BackBtnClicked(_ sender: Any) {
        goToPreviousController()
     }
@@ -64,34 +68,24 @@ extension FollowPeopleVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:FollowPeopleListCell.cell)  as!  FollowPeopleListCell
-        cell.userProfile.image = UIImage(named: self.arrUserImage[indexPath.row])
-        cell.userNameLable.text = self.arrUserName[indexPath.row]
-        if arrSelectedIndex.contains(indexPath) { // You need to check wether selected index array contain current index if yes then change the color
-            cell.viewFollow.backgroundColor = UIColor.init(hexString: "#A740E4")
-            cell.lblFollow.textColor = UIColor.white
-            cell.lblFollow.text = "Unfollow"
-        }
-        else {
-            cell.viewFollow.backgroundColor = UIColor.white
-            cell.lblFollow.textColor = UIColor.init(hexString: "#9833EA")
-            cell.lblFollow.text = "Follow"
-        }
+        cell.drawCell(with: self.userList?[indexPath.row])
+       
         
         cell.layoutSubviews()
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let strData = arrUserImage[indexPath.item]
-         
-         if arrSelectedIndex.contains(indexPath) {
-             arrSelectedIndex = arrSelectedIndex.filter { $0 != indexPath}
-             arrSelectedData = arrSelectedData.filter { $0 != strData}
-         }
-         else {
-             arrSelectedIndex.append(indexPath)
-             arrSelectedData.append(strData)
-         }
-
+        
+        self.viewModel.execute(with: .followUnfollow(parameter: ["token":UserDefaultHelper.token ?? "", "following_user_id":"\(self.userList?[indexPath.row].id ?? 0)"]))
+        
+        if let following = self.userList?[indexPath.row].following {
+            if following == 0 {
+                self.userList?[indexPath.row].following = 1
+            }else{
+                self.userList?[indexPath.row].following = 0
+            }
+        }
 
          self.userListTableView.reloadData()
     }

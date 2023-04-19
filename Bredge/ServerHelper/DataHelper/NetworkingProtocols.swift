@@ -109,8 +109,7 @@ enum ApiTypes{
     case postCommentList(parameter:Parameter?)
     case userProfile(parameter:Parameter?)
     case userProfileDetail(parameter:Parameter?)
-    case follow(parameter:Parameter?)
-    case unfollow(parameter:Parameter?)
+    case followUnfollow(parameter:Parameter?)
     case likeUnlikePost(parameter:Parameter?)
     case storePostComment(parameter:Parameter?)
     case getAllUserList(parameter:Parameter?)
@@ -157,10 +156,9 @@ extension ApiTypes : EndPointType {
             return "user-profile"
         case .userProfileDetail:
             return "profile-detail"
-        case .unfollow:
-            return "unfollow"
-        case .follow:
+        case .followUnfollow:
             return "follow"
+        
         case .likeUnlikePost:
             return "like"
         case .storePostComment:
@@ -190,7 +188,7 @@ extension ApiTypes : EndPointType {
     
     var task: HTTPTask {
         switch self {
-        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost,.myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .follow, .unfollow, .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
+        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost,.myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .followUnfollow, .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
             return .multipartWithParameters(parameters: parameters, headers: headers, boundery: boundary)
         default:
             return .requestWithoutHeader
@@ -200,7 +198,7 @@ extension ApiTypes : EndPointType {
     
     var baseURL: URL {
         switch self {
-        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .All_Interest, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost, .allEvents, .myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .follow, .unfollow, .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
+        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .All_Interest, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost, .allEvents, .myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .followUnfollow,  .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
             guard let url = URL(string: "http://bregeapptest.in/api/") else { fatalError("baseURL could not be configured.")}
             return url
         default:
@@ -212,7 +210,7 @@ extension ApiTypes : EndPointType {
     
     var headers: HTTPHeaders? {
         switch self {
-        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost, .myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .follow, .unfollow, .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
+        case .LoginUser, .SignUp, .VerifyOtp, .UpdateProfile, .Forget_Password, .ResendOTP, .SetNew_Password, .createPost, .myEvents, .createEvent, .postlist, .postLikeList, .postCommentList, .userProfile, .userProfileDetail, .followUnfollow, .likeUnlikePost, .storePostComment, .uploadprofileimage, .storeUserIntrest, .getAllUserList:
             return ["Content-Type":"multipart/form-data; boundary=\(boundary)"]
         default :
             return ["":""]
@@ -222,7 +220,7 @@ extension ApiTypes : EndPointType {
     
     var parameters : Parameter? {
         switch self {
-        case .LoginUser(parameter: let p), .SignUp(parameter: let p), .VerifyOtp(parameter: let p) , .UpdateProfile(parameter: let p), .Forget_Password(let p), .ResendOTP(let p), .SetNew_Password(let p), .createPost(let p), .myEvents(let p), .createEvent(let p), .postlist(let p), .postLikeList(let p), .postCommentList(let p), .userProfile(let p), .userProfileDetail(let p), .follow(let p), .unfollow(let p), .likeUnlikePost(let p), .storePostComment(let p), .uploadprofileimage(let p), .storeUserIntrest(let p), .getAllUserList(let p):
+        case .LoginUser(parameter: let p), .SignUp(parameter: let p), .VerifyOtp(parameter: let p) , .UpdateProfile(parameter: let p), .Forget_Password(let p), .ResendOTP(let p), .SetNew_Password(let p), .createPost(let p), .myEvents(let p), .createEvent(let p), .postlist(let p), .postLikeList(let p), .postCommentList(let p), .userProfile(let p), .userProfileDetail(let p), .followUnfollow(let p),  .likeUnlikePost(let p), .storePostComment(let p), .uploadprofileimage(let p), .storeUserIntrest(let p), .getAllUserList(let p):
             return p
         default:
             return ["":""]

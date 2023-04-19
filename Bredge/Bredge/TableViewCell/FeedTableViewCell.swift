@@ -59,19 +59,6 @@ class FeedTableViewCell: UITableViewCell {
         if let i = data?.profile_img, let url = URL(string: "http://bregeapptest.in/public/profile_image/\(i)") {
             self.setImage(with: url, imageView: nil, button: self.btnFeedProfile)
         
-           /* self.getProfileData(from: url) { data, response, error in
-                guard let data = data, error == nil else {
-                    DispatchQueue.main.async() {
-                        let image = UIImage(named:"profileImg")
-                        
-                        self.btnFeedProfile.setImage(image, for: .normal)
-                    }
-                    return
-                }
-                DispatchQueue.main.async() {
-                    self.btnFeedProfile.setImage(UIImage(data: data), for: .normal)
-                  }
-            }*/
         }
         
         if let imgs = data?.images{

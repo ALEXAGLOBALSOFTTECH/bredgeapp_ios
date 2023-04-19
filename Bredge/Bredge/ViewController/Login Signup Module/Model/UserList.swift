@@ -1,7 +1,7 @@
 
 
 import Foundation
-struct UserList : Codable {
+class UserList : Codable {
 	let id : Int?
 	let first_name : String?
 	let last_name : String?
@@ -10,9 +10,12 @@ struct UserList : Codable {
 	let image : String?
 	let user_token : String?
 	let followerCount : Int?
+    var follower : Int?
+    var following : Int?
 
 	enum CodingKeys: String, CodingKey {
-
+        case follower = "follower"
+        case following = "following"
 		case id = "id"
 		case first_name = "first_name"
 		case last_name = "last_name"
@@ -23,7 +26,7 @@ struct UserList : Codable {
 		case followerCount = "followerCount"
 	}
 
-	init(from decoder: Decoder) throws {
+	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(Int.self, forKey: .id)
 		first_name = try values.decodeIfPresent(String.self, forKey: .first_name)
@@ -33,6 +36,8 @@ struct UserList : Codable {
 		image = try values.decodeIfPresent(String.self, forKey: .image)
 		user_token = try values.decodeIfPresent(String.self, forKey: .user_token)
 		followerCount = try values.decodeIfPresent(Int.self, forKey: .followerCount)
+        following = try values.decodeIfPresent(Int.self, forKey: .followerCount)
+        follower = try values.decodeIfPresent(Int.self, forKey: .followerCount)
 	}
 
 }
